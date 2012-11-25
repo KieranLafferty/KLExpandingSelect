@@ -15,6 +15,7 @@
 #define kPetalShadowOffset CGSizeMake(0, 3)
 #define kPetalShadowOpacity 0.6
 #define kPetalShadowRadius 4
+#define kPetalAlpha 0.96
 
 //Animation Settings
 #define kAnimationGrowDuration 0.3
@@ -33,7 +34,7 @@
 #define kDefaultRightMargin kPetalWidth //Amount of space to reserve the right to ensure that the control doesnt get drawn off screen
 #define kDefaultBottomMargin kPetalHeight  //Amount of space to reserve the bottom to ensure that the control doesnt get drawn off screen
 #define kDefaultLeftMargin kPetalWidth  //Amount of space to reserve the left to ensure that the control doesnt get drawn off screen
-#define kDefaultRasterizationScale 3.0
+#define kDefaultRasterizationScale 5.0
 
 #import "KLExpandingSelect.h"
 #import <QuartzCore/QuartzCore.h>
@@ -271,7 +272,8 @@
 
 -(id) initWithImage:(UIImage*) image {
     if (self = [super initWithFrame:CGRectMake(0, 0, kPetalWidth, kPetalHeight)]) {
-
+        [self setAlpha: kPetalAlpha];
+        
         [self setBackgroundColor:[UIColor clearColor]];
         self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 
