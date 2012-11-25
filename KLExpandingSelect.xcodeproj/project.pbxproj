@@ -18,13 +18,20 @@
 		77A6BD4B1661A4BE00210C61 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77A6BD4A1661A4BE00210C61 /* Default-568h@2x.png */; };
 		77A6BD4E1661A4BE00210C61 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77A6BD4C1661A4BE00210C61 /* MainStoryboard_iPhone.storyboard */; };
 		77A6BD511661A4BE00210C61 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77A6BD4F1661A4BE00210C61 /* MainStoryboard_iPad.storyboard */; };
-		77A6BD541661A4BE00210C61 /* KLMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A6BD531661A4BE00210C61 /* KLMasterViewController.m */; };
-		77A6BD571661A4BE00210C61 /* KLDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A6BD561661A4BE00210C61 /* KLDetailViewController.m */; };
 		77A6BD5F1661A4BE00210C61 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A6BD5E1661A4BE00210C61 /* SenTestingKit.framework */; };
 		77A6BD601661A4BE00210C61 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A6BD341661A4BE00210C61 /* UIKit.framework */; };
 		77A6BD611661A4BE00210C61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A6BD361661A4BE00210C61 /* Foundation.framework */; };
 		77A6BD691661A4BE00210C61 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77A6BD671661A4BE00210C61 /* InfoPlist.strings */; };
 		77A6BD6C1661A4BE00210C61 /* KLExpandingSelectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A6BD6B1661A4BE00210C61 /* KLExpandingSelectTests.m */; };
+		77A6BD771661A57300210C61 /* KLRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A6BD761661A57300210C61 /* KLRootViewController.m */; };
+		77A6BD7B1661A62A00210C61 /* KLExpandingSelect.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A6BD7A1661A62A00210C61 /* KLExpandingSelect.m */; };
+		77A6BD821661BF4E00210C61 /* petal-email@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77A6BD7D1661BF4E00210C61 /* petal-email@2x.png */; };
+		77A6BD831661BF4E00210C61 /* petal-facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77A6BD7E1661BF4E00210C61 /* petal-facebook@2x.png */; };
+		77A6BD841661BF4E00210C61 /* petal-save@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77A6BD7F1661BF4E00210C61 /* petal-save@2x.png */; };
+		77A6BD851661BF4E00210C61 /* petal-twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77A6BD801661BF4E00210C61 /* petal-twitter@2x.png */; };
+		77A6BD861661BF4E00210C61 /* petal-unsave@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77A6BD811661BF4E00210C61 /* petal-unsave@2x.png */; };
+		77A6BD881661CFD500210C61 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A6BD871661CFD500210C61 /* QuartzCore.framework */; };
+		77A6BD8E1661DBC700210C61 /* Petal Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77A6BD8D1661DBC700210C61 /* Petal Data.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,16 +60,23 @@
 		77A6BD4A1661A4BE00210C61 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		77A6BD4D1661A4BE00210C61 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
 		77A6BD501661A4BE00210C61 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
-		77A6BD521661A4BE00210C61 /* KLMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLMasterViewController.h; sourceTree = "<group>"; };
-		77A6BD531661A4BE00210C61 /* KLMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLMasterViewController.m; sourceTree = "<group>"; };
-		77A6BD551661A4BE00210C61 /* KLDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLDetailViewController.h; sourceTree = "<group>"; };
-		77A6BD561661A4BE00210C61 /* KLDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLDetailViewController.m; sourceTree = "<group>"; };
 		77A6BD5D1661A4BE00210C61 /* KLExpandingSelectTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KLExpandingSelectTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77A6BD5E1661A4BE00210C61 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		77A6BD661661A4BE00210C61 /* KLExpandingSelectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KLExpandingSelectTests-Info.plist"; sourceTree = "<group>"; };
 		77A6BD681661A4BE00210C61 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		77A6BD6A1661A4BE00210C61 /* KLExpandingSelectTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLExpandingSelectTests.h; sourceTree = "<group>"; };
 		77A6BD6B1661A4BE00210C61 /* KLExpandingSelectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLExpandingSelectTests.m; sourceTree = "<group>"; };
+		77A6BD751661A57300210C61 /* KLRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLRootViewController.h; sourceTree = "<group>"; };
+		77A6BD761661A57300210C61 /* KLRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLRootViewController.m; sourceTree = "<group>"; };
+		77A6BD791661A62A00210C61 /* KLExpandingSelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLExpandingSelect.h; sourceTree = "<group>"; };
+		77A6BD7A1661A62A00210C61 /* KLExpandingSelect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLExpandingSelect.m; sourceTree = "<group>"; };
+		77A6BD7D1661BF4E00210C61 /* petal-email@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "petal-email@2x.png"; sourceTree = "<group>"; };
+		77A6BD7E1661BF4E00210C61 /* petal-facebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "petal-facebook@2x.png"; sourceTree = "<group>"; };
+		77A6BD7F1661BF4E00210C61 /* petal-save@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "petal-save@2x.png"; sourceTree = "<group>"; };
+		77A6BD801661BF4E00210C61 /* petal-twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "petal-twitter@2x.png"; sourceTree = "<group>"; };
+		77A6BD811661BF4E00210C61 /* petal-unsave@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "petal-unsave@2x.png"; sourceTree = "<group>"; };
+		77A6BD871661CFD500210C61 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		77A6BD8D1661DBC700210C61 /* Petal Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Petal Data.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77A6BD881661CFD500210C61 /* QuartzCore.framework in Frameworks */,
 				77A6BD351661A4BE00210C61 /* UIKit.framework in Frameworks */,
 				77A6BD371661A4BE00210C61 /* Foundation.framework in Frameworks */,
 				77A6BD391661A4BE00210C61 /* CoreGraphics.framework in Frameworks */,
@@ -92,6 +107,8 @@
 		77A6BD251661A4BE00210C61 = {
 			isa = PBXGroup;
 			children = (
+				77A6BD8D1661DBC700210C61 /* Petal Data.plist */,
+				77A6BD871661CFD500210C61 /* QuartzCore.framework */,
 				77A6BD3A1661A4BE00210C61 /* KLExpandingSelect */,
 				77A6BD641661A4BE00210C61 /* KLExpandingSelectTests */,
 				77A6BD331661A4BE00210C61 /* Frameworks */,
@@ -126,10 +143,9 @@
 				77A6BD441661A4BE00210C61 /* KLAppDelegate.m */,
 				77A6BD4C1661A4BE00210C61 /* MainStoryboard_iPhone.storyboard */,
 				77A6BD4F1661A4BE00210C61 /* MainStoryboard_iPad.storyboard */,
-				77A6BD521661A4BE00210C61 /* KLMasterViewController.h */,
-				77A6BD531661A4BE00210C61 /* KLMasterViewController.m */,
-				77A6BD551661A4BE00210C61 /* KLDetailViewController.h */,
-				77A6BD561661A4BE00210C61 /* KLDetailViewController.m */,
+				77A6BD751661A57300210C61 /* KLRootViewController.h */,
+				77A6BD761661A57300210C61 /* KLRootViewController.m */,
+				77A6BD781661A61500210C61 /* KLExpandingSelect */,
 				77A6BD3B1661A4BE00210C61 /* Supporting Files */,
 			);
 			path = KLExpandingSelect;
@@ -166,6 +182,28 @@
 				77A6BD671661A4BE00210C61 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		77A6BD781661A61500210C61 /* KLExpandingSelect */ = {
+			isa = PBXGroup;
+			children = (
+				77A6BD7C1661BF3A00210C61 /* Images */,
+				77A6BD791661A62A00210C61 /* KLExpandingSelect.h */,
+				77A6BD7A1661A62A00210C61 /* KLExpandingSelect.m */,
+			);
+			name = KLExpandingSelect;
+			sourceTree = "<group>";
+		};
+		77A6BD7C1661BF3A00210C61 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				77A6BD7D1661BF4E00210C61 /* petal-email@2x.png */,
+				77A6BD7E1661BF4E00210C61 /* petal-facebook@2x.png */,
+				77A6BD7F1661BF4E00210C61 /* petal-save@2x.png */,
+				77A6BD801661BF4E00210C61 /* petal-twitter@2x.png */,
+				77A6BD811661BF4E00210C61 /* petal-unsave@2x.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -246,6 +284,12 @@
 				77A6BD4B1661A4BE00210C61 /* Default-568h@2x.png in Resources */,
 				77A6BD4E1661A4BE00210C61 /* MainStoryboard_iPhone.storyboard in Resources */,
 				77A6BD511661A4BE00210C61 /* MainStoryboard_iPad.storyboard in Resources */,
+				77A6BD821661BF4E00210C61 /* petal-email@2x.png in Resources */,
+				77A6BD831661BF4E00210C61 /* petal-facebook@2x.png in Resources */,
+				77A6BD841661BF4E00210C61 /* petal-save@2x.png in Resources */,
+				77A6BD851661BF4E00210C61 /* petal-twitter@2x.png in Resources */,
+				77A6BD861661BF4E00210C61 /* petal-unsave@2x.png in Resources */,
+				77A6BD8E1661DBC700210C61 /* Petal Data.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,8 +326,8 @@
 			files = (
 				77A6BD411661A4BE00210C61 /* main.m in Sources */,
 				77A6BD451661A4BE00210C61 /* KLAppDelegate.m in Sources */,
-				77A6BD541661A4BE00210C61 /* KLMasterViewController.m in Sources */,
-				77A6BD571661A4BE00210C61 /* KLDetailViewController.m in Sources */,
+				77A6BD771661A57300210C61 /* KLRootViewController.m in Sources */,
+				77A6BD7B1661A62A00210C61 /* KLExpandingSelect.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,10 +440,14 @@
 		77A6BD701661A4BE00210C61 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kieran Lafferty (47FSUFR242)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kieran Lafferty (47FSUFR242)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KLExpandingSelect/KLExpandingSelect-Prefix.pch";
 				INFOPLIST_FILE = "KLExpandingSelect/KLExpandingSelect-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "84D11397-7195-4F47-88C0-FEB8EB407367";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "84D11397-7195-4F47-88C0-FEB8EB407367";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -407,10 +455,12 @@
 		77A6BD711661A4BE00210C61 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kieran Lafferty (47FSUFR242)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "KLExpandingSelect/KLExpandingSelect-Prefix.pch";
 				INFOPLIST_FILE = "KLExpandingSelect/KLExpandingSelect-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "84D11397-7195-4F47-88C0-FEB8EB407367";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -468,6 +518,7 @@
 				77A6BD711661A4BE00210C61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		77A6BD721661A4BE00210C61 /* Build configuration list for PBXNativeTarget "KLExpandingSelectTests" */ = {
 			isa = XCConfigurationList;
@@ -476,6 +527,7 @@
 				77A6BD741661A4BE00210C61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
