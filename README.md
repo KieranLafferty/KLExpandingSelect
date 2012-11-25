@@ -1,7 +1,7 @@
 KLExpandingSelect
 =======
 
-<img src="https://raw.github.com/KieranLafferty/KLExpandingSelect/master/KLExpandingSelect/iPhoneScreenshot.png" width="50%" height="50%"/>
+<img src="https://raw.github.com/KieranLafferty/KLExpandingSelect/master/KLExpandingSelect/iPhoneScreenshot.png" width="50%"/>
 
 Have a  menu appear exposing beautiful and easy to access buttons to the user without removing them from where they want to be. 
 
