@@ -9,8 +9,8 @@
 #define kTouchDuration 1.0
 
 //Petal settings
-#define kPetalHeight 80
-#define kPetalWidth 60
+#define kPetalHeight 85
+#define kPetalWidth 64
 #define kPetalShadowColor [UIColor darkGrayColor]
 #define kPetalShadowOffset CGSizeMake(0, 3)
 #define kPetalShadowOpacity 0.6
@@ -272,12 +272,10 @@
 -(id) initWithImage:(UIImage*) image {
     if (self = [super initWithFrame:CGRectMake(0, 0, kPetalWidth, kPetalHeight)]) {
 
+        [self setImage:image forState:UIControlStateNormal];
         [self setBackgroundColor:[UIColor clearColor]];
         self.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 
-        self.backgroundImage = [[UIImageView alloc] initWithImage:image];
-        [self.backgroundImage setFrame: self.bounds];
-        [self addSubview:self.backgroundImage];
         
         //Set up the shadows
         [self.layer setShadowColor:[kPetalShadowColor CGColor]];
@@ -285,8 +283,7 @@
         [self.layer setShadowOpacity: kPetalShadowOpacity];
         [self.layer setShadowRadius: kPetalShadowRadius];
         
-        [self.layer setShouldRasterize: YES];
-        [self.layer setRasterizationScale: 3.0];
+        [self.layer setShouldRasterize:NO];
     }
     return self;
 }
