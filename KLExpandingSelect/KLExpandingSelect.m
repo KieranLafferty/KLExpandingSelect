@@ -6,7 +6,6 @@
 //  Copyright (c) 2012 Kieran Lafferty. All rights reserved.
 
 
-#define kTouchDuration 1.0
 
 //Petal settings
 #define kPetalHeight 80
@@ -35,6 +34,8 @@
 #define kDefaultBottomMargin kPetalHeight  //Amount of space to reserve the bottom to ensure that the control doesnt get drawn off screen
 #define kDefaultLeftMargin kPetalWidth  //Amount of space to reserve the left to ensure that the control doesnt get drawn off screen
 #define kDefaultRasterizationScale 5.0
+
+#define kTouchDuration 1.0
 
 #import "KLExpandingSelect.h"
 #import <QuartzCore/QuartzCore.h>

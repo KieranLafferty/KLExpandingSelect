@@ -23,11 +23,9 @@
 @optional
 // Called before the user changes the selection. Return a new indexPath, or nil, to change the proposed selection.
 - (NSIndexPath *)expandingSelector:(id)expandingSelect willSelectItemAtIndexPath:(NSIndexPath *)indexPath;
-- (NSIndexPath *)expandingSelector:(id)expandingSelect willDeselectItemAtIndexPath:(NSIndexPath *)indexPath;
 
 // Called after the user changes the selection.
 - (void)expandingSelector:(id)expandingSelect didSelectItemAtIndexPath:(NSIndexPath *)indexPath;
-- (void)expandingSelector:(id)expandingSelect didDeselectItemAtIndexPath:(NSIndexPath *)indexPath NS_AVAILABLE_IOS(3_0);
 
 //Called after the animations have completed
 - (void)expandingSelector:(id)expandingSelect didFinishExpandingAtPoint:(CGPoint) point;

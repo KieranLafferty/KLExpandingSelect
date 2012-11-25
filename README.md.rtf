@@ -1,0 +1,155 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf340
+{\fonttbl\f0\fmodern\fcharset0 Courier;\f1\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green116\blue0;\red170\green13\blue145;\red63\green110\blue116;
+\red46\green13\blue110;\red38\green71\blue75;\red92\green38\blue153;\red196\green26\blue22;\red100\green56\blue32;
+\red28\green0\blue207;}
+\margl1440\margr1440\vieww28520\viewh16600\viewkind0
+\deftab720
+\pard\pardeftab720
+
+\f0\fs26 \cf0 KLExpandingSelect\
+=======\
+\
+<img src="https://raw.github.com/KieranLafferty/KLExpandingSelect/master/KLExpandingSelect/iPhoneScreenshot.png" />\
+\
+Have a blooming menu appear exposing easy to access buttons to the user without removing them from where they want to be. \
+\
+Note: KLExpandingSelect is intended for use with portrait orientation on iPhone/iPad/iPod Touch.\
+\
+[Check out the Demo](http://www.youtube.com/watch?v=nc8JDvieUbU&feature=youtube_gdata_player) *Excuse the graphics glitches and lag due to my slow computer.*\
+\
+## Installation ##\
+\
+Drag the included <code>KLExpandingSelect.h, KLExpandingSelect.m</code> files into your project. Then, include the following frameworks under *Link Binary With Libraries*:\
+\
+* QuartzCore.framework\
+\
+## Usage ##\
+\
+Import the required file and declare your controller to conform to the KLExpandingSelect datasource and delegate\
+\
+	#import "KLExpandingSelect.h"\
+\
+	@interface KLRootViewController : UIViewController <KLExpandingSelectDataSource, KLExpandingSelectDelegate>\
+\
+\
+Initialize the control\
+\
+\pard\tx529\pardeftab529\pardirnatural
+
+\f1\fs22 \cf0 \CocoaLigature0 	\cf2 // Configure the Expander Select and add to view controllers view.\cf0 \
+    \cf3 self\cf0 .\cf4 expandingSelect\cf0  = [[\cf4 KLExpandingSelect\cf0  \cf5 alloc\cf0 ] \cf6 initWithDelegate\cf0 : \cf3 self\cf0 \
+                                                            \cf6 dataSource\cf0 : \cf3 self\cf0 ];\
+    [\cf3 self\cf0 .\cf7 view\cf0  \cf6 setExpandingSelect\cf0 :\cf3 self\cf0 .\cf4 expandingSelect\cf0 ];\
+    [\cf3 self\cf0 .\cf7 view\cf0  \cf5 addSubview\cf0 : \cf3 self\cf0 .\cf4 expandingSelect\cf0 ];\
+
+\f0\fs26 \CocoaLigature1 \
+\pard\pardeftab720
+\cf0 Implement the required methods of the data source \
+\
+\pard\tx529\pardeftab529\pardirnatural
+
+\f1\fs22 \cf0 \CocoaLigature0 	- (\cf7 NSInteger\cf0 )expandingSelector:(\cf3 id\cf0 ) expandingSelect numberOfRowsInSection:(\cf7 NSInteger\cf0 )section\{\
+	    \cf3 return\cf0  [\cf3 self\cf0 .\cf4 selectorData\cf0  \cf5 count\cf0 ];\
+	\}\
+	- (\cf4 KLExpandingPetal\cf0  *)expandingSelector:(\cf3 id\cf0 ) expandingSelect itemForRowAtIndexPath:(\cf7 NSIndexPath\cf0  *)indexPath \{\
+    	\cf7 NSDictionary\cf0 * dictForPetal = [\cf3 self\cf0 .\cf4 selectorData\cf0  \cf5 objectAtIndex\cf0 :indexPath.\cf7 row\cf0 ];\
+    	\cf7 NSString\cf0 * imageName = [dictForPetal \cf5 objectForKey\cf0 :\cf8 @"image"\cf0 ];\
+    	\cf4 KLExpandingPetal\cf0 * petal = [[\cf4 KLExpandingPetal\cf0  \cf5 alloc\cf0 ] \cf6 initWithImage\cf0 :[\cf7 UIImage\cf0  \cf5 imageNamed\cf0 :imageName]];\
+    	\cf3 return\cf0  petal;\
+	\}\
+
+\f0\fs26 \CocoaLigature1 \
+\pard\pardeftab720
+\cf0 Implement the optional delegate method to be notified when a new item is selected\
+\
+\pard\tx529\pardeftab529\pardirnatural
+
+\f1\fs22 \cf2 \CocoaLigature0 	// Called before the user changes the selection. Return a new indexPath, or nil, to change the proposed selection.\cf0 \
+	- (\cf7 NSIndexPath\cf0  *)expandingSelector:(\cf3 id\cf0 )expandingSelect willSelectItemAtIndexPath:(\cf7 NSIndexPath\cf0  *)indexPath;\
+	\
+\cf2 	// Called after the user changes the selection.\cf0 \
+	- (\cf3 void\cf0 )expandingSelector:(\cf3 id\cf0 )expandingSelect didSelectItemAtIndexPath:(\cf7 NSIndexPath\cf0  *)indexPath;\
+	\
+\cf2 	//Called after the animations have completed\cf0 \
+	- (\cf3 void\cf0 )expandingSelector:(\cf3 id\cf0 )expandingSelect didFinishExpandingAtPoint:(\cf7 CGPoint\cf0 ) point;\
+	- (\cf3 void\cf0 )expandingSelector:(\cf3 id\cf0 )expandingSelect didFinishCollapsingAtPoint:(\cf7 CGPoint\cf0 ) point;\
+	\
+	- (\cf3 void\cf0 )expandingSelector:(\cf3 id\cf0 )expandingSelect didFinishExpandingPetal: (\cf4 KLExpandingPetal\cf0 *) petal;\
+	- (\cf3 void\cf0 )expandingSelector:(\cf3 id\cf0 )expandingSelect didFinishCollapsingPetal: (\cf4 KLExpandingPetal\cf0 *) petal;\
+
+\f0\fs26 \CocoaLigature1 \
+\pard\pardeftab720
+\cf0 \
+## Config ##\
+The visual appearance can be tweaked by changing the constants in <code>KLExpandingSelect.m</code>:\
+\
+\pard\tx529\pardeftab529\pardirnatural
+
+\f1\fs22 \cf2 \CocoaLigature0 	//Petal settings\cf0 \
+\pard\tx529\pardeftab529\pardirnatural
+\cf9 	#define kPetalHeight \cf10 80\cf9 \
+	#define kPetalWidth \cf10 60\cf9 \
+	#define kPetalShadowColor [UIColor darkGrayColor]\
+	#define kPetalShadowOffset CGSizeMake(\cf10 0\cf9 , \cf10 3\cf9 )\
+	#define kPetalShadowOpacity \cf10 0.6\cf9 \
+	#define kPetalShadowRadius \cf10 4\cf9 \
+	#define kPetalAlpha \cf10 0.96\cf9 \
+\pard\tx529\pardeftab529\pardirnatural
+\cf0 	\
+\cf2 	//Animation Settings\cf0 \
+\pard\tx529\pardeftab529\pardirnatural
+\cf9 	#define kAnimationGrowDuration \cf10 0.3\cf9 \
+	#define kAnimationRotateDuration \cf10 0.4\cf9 \
+	#define kAnimationVerticalOffset \cf10 3\cf9       \cf2 //Measured in pixels, this variable sets how high the  items will animate before beginning their rotation\cf0 \
+\cf9 	#define kAnimationPetalSpread \cf10 1.003\cf9      \cf2 //A tuning parameter for determining how crowded petals are with respect to eachother\cf0 \
+\cf9 	#define kAnimationPetalDelay \cf10 0.1\cf9         \cf2 //The amount of time between animating each petal\cf0 \
+	\
+\cf9 	#define kAnimationPetalMinScale \cf10 0.001\cf9    \cf2 //Scale of the item at its smallest (i.e 0.01 is 1/100th its original size\cf0 \
+\cf9 	#define kAnimationPetalMaxScale \cf10 1000\cf9       \cf2 //Scale of the item at its largest (relative to on kAnimationPetalMinScale)\cf0 \
+	\
+\pard\tx529\pardeftab529\pardirnatural
+\cf2 	//Customize the layout of the control\cf0 \
+\pard\tx529\pardeftab529\pardirnatural
+\cf9 	#define kDefaultHeight \cf10 2\cf9 *kPetalHeight + \cf10 2\cf9 *kAnimationVerticalOffset      \cf2 //The height of the control upon full expansion\cf0 \
+\cf9 	#define kDefaultWidth kDefaultHeight    \cf2 //The width of the control upon full expansion\cf0 \
+\cf9 	#define kDefaultTopMargin kPetalHeight  \cf2 //Amount of space to reserve the top to ensure that the control doesnt get drawn off screen\cf0 \
+\cf9 	#define kDefaultRightMargin kPetalWidth \cf2 //Amount of space to reserve the right to ensure that the control doesnt get drawn off screen\cf0 \
+\cf9 	#define kDefaultBottomMargin kPetalHeight  \cf2 //Amount of space to reserve the bottom to ensure that the control doesnt get drawn off screen\cf0 \
+\cf9 	#define kDefaultLeftMargin kPetalWidth  \cf2 //Amount of space to reserve the left to ensure that the control doesnt get drawn off screen\cf0 \
+\cf9 	#define kDefaultRasterizationScale \cf10 5.0\cf9 \
+\pard\tx529\pardeftab529\pardirnatural
+\cf0 	\
+\pard\tx529\pardeftab529\pardirnatural
+\cf9 	#define kTouchDuration \cf10 1.0
+\f0\fs26 \cf0 \CocoaLigature1 \
+\pard\pardeftab720
+\cf0 \
+\
+## Contact ##\
+\
+* [@kieran_lafferty](https://twitter.com/kieran_lafferty) on Twitter\
+* [@kieranlafferty](https://github.com/kieranlafferty) on Github\
+* <a href="mailTo:kieran.lafferty@gmail.com">kieran.lafferty [at] gmail [dot] com</a>\
+\
+## License ##\
+\
+Copyright (c) 2012 Kieran Lafferty\
+\
+Permission is hereby granted, free of charge, to any person obtaining a copy\
+of this software and associated documentation files (the "Software"), to deal\
+in the Software without restriction, including without limitation the rights\
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell\
+copies of the Software, and to permit persons to whom the Software is\
+furnished to do so, subject to the following conditions:\
+\
+The above copyright notice and this permission notice shall be included in\
+all copies or substantial portions of the Software.\
+\
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN\
+THE SOFTWARE.}
