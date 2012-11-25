@@ -1,9 +1,9 @@
 KLExpandingSelect
 =======
 
-<img src="https://raw.github.com/KieranLafferty/KLExpandingSelect/master/KLExpandingSelect/iPhoneScreenshot.png" />
+<img src="https://raw.github.com/KieranLafferty/KLExpandingSelect/master/KLExpandingSelect/iPhoneScreenshot.png" width="50%" height="50%"/>
 
-Have a blooming menu appear exposing easy to access buttons to the user without removing them from where they want to be. 
+Have a  menu appear exposing beautiful and easy to access buttons to the user without removing them from where they want to be. 
 
 Note: KLExpandingSelect is intended for use with portrait orientation on iPhone/iPad/iPod Touch.
 
