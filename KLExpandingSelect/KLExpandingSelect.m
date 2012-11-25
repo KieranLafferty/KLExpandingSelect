@@ -33,7 +33,7 @@
 #define kDefaultRightMargin kPetalWidth //Amount of space to reserve the right to ensure that the control doesnt get drawn off screen
 #define kDefaultBottomMargin kPetalHeight  //Amount of space to reserve the bottom to ensure that the control doesnt get drawn off screen
 #define kDefaultLeftMargin kPetalWidth  //Amount of space to reserve the left to ensure that the control doesnt get drawn off screen
-
+#define kDefaultRasterizationScale 3.0
 
 #import "KLExpandingSelect.h"
 #import <QuartzCore/QuartzCore.h>
@@ -286,7 +286,7 @@
         [self.layer setShadowRadius: kPetalShadowRadius];
         
         [self.layer setShouldRasterize: YES];
-        [self.layer setRasterizationScale: 3.0];
+        [self.layer setRasterizationScale: kDefaultRasterizationScale];
     }
     return self;
 }
