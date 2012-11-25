@@ -11,5 +11,4 @@
 @interface KLRootViewController : UIViewController <KLExpandingSelectDataSource, KLExpandingSelectDelegate>
 @property (nonatomic, strong) KLExpandingSelect* expandingSelect;
 @property (nonatomic, strong) NSArray* selectorData;
-- (IBAction)didSelectCollapseButton:(id)sender;
 @end

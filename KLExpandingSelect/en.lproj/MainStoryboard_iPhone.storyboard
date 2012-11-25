@@ -19,22 +19,64 @@
             </objects>
             <point key="canvasLocation" x="-1" y="64"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Root View Controller - KLExpandingSelect-->
         <scene sceneID="SSO-Lw-nye">
             <objects>
                 <viewController id="Uzn-St-H3P" customClass="KLRootViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="FWb-wJ-f1P">
                         <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Press and hold anywhere to reveal the control" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="ngT-d1-I5S">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="sfX-ex-eWm"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="21"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Customize the control by changing the #define values in KLExpandingSelect.m" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="7Xf-Uk-Fmj">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="U0L-8X-W5P"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="21"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Report any bugs or feature suggestions via Github" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="V4c-RA-sOF">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="fc1-Ob-UkM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="21"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Not required, but please let me know if you choose to use this in your app!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="xip-JK-YNt">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="OkT-fv-szR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="21"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.90196078431372551" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="ngT-d1-I5S" firstAttribute="top" secondItem="FWb-wJ-f1P" secondAttribute="top" constant="20" symbolic="YES" type="default" id="3sr-Nk-t6E"/>
+                            <constraint firstAttribute="trailing" secondItem="V4c-RA-sOF" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="5Iz-fo-H43"/>
+                            <constraint firstItem="7Xf-Uk-Fmj" firstAttribute="leading" secondItem="FWb-wJ-f1P" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="6rl-fJ-X6I"/>
+                            <constraint firstItem="ngT-d1-I5S" firstAttribute="leading" secondItem="FWb-wJ-f1P" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="7qf-31-P7S"/>
+                            <constraint firstItem="xip-JK-YNt" firstAttribute="leading" secondItem="FWb-wJ-f1P" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="8uc-e0-uiu"/>
+                            <constraint firstItem="xip-JK-YNt" firstAttribute="top" secondItem="V4c-RA-sOF" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="Gf1-rG-c17"/>
+                            <constraint firstAttribute="trailing" secondItem="ngT-d1-I5S" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="K30-bs-6gU"/>
+                            <constraint firstItem="V4c-RA-sOF" firstAttribute="leading" secondItem="FWb-wJ-f1P" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="ZwZ-qH-YoH"/>
+                            <constraint firstItem="7Xf-Uk-Fmj" firstAttribute="top" secondItem="FWb-wJ-f1P" secondAttribute="top" constant="111" id="ckz-Is-V0m"/>
+                            <constraint firstItem="V4c-RA-sOF" firstAttribute="top" secondItem="FWb-wJ-f1P" secondAttribute="top" constant="213" id="gKb-Gg-SZv"/>
+                            <constraint firstAttribute="trailing" secondItem="7Xf-Uk-Fmj" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="h1A-Jp-CzQ"/>
+                            <constraint firstAttribute="trailing" secondItem="xip-JK-YNt" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="zci-2d-KIl"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="3zk-ux-K7W">
-                        <barButtonItem key="rightBarButtonItem" title="Close" id="Pbo-jg-tJr">
-                            <connections>
-                                <action selector="didSelectCollapseButton:" destination="Uzn-St-H3P" id="DIg-bW-Zdt"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="KLExpandingSelect" id="3zk-ux-K7W"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="49i-iV-h3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -44,9 +86,9 @@
     <classes>
         <class className="KLRootViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/KLRootViewController.h"/>
-            <relationships>
-                <relationship kind="action" name="didSelectCollapseButton:"/>
-            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

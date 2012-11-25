@@ -182,8 +182,6 @@
                                                         didFinishExpandingAtPoint: origin];
                                              }
                                          }];
-                         NSLog(@"%f, %f", item.frame.size.width, item.frame.size.height);
-
                      }];
 
 }

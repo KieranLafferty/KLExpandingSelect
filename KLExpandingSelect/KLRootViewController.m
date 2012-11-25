@@ -59,9 +59,6 @@
     KLExpandingPetal* petal = [[KLExpandingPetal alloc] initWithImage:[UIImage imageNamed:imageName]];
     return petal;
 }
-- (IBAction)didSelectCollapseButton:(id)sender {
-    [self.expandingSelect collapseItems];
-}
 
 #pragma mark - KLExpandingSelect Delegate Methods
 // Called before the user changes the selection. Return a new indexPath, or nil, to change the proposed selection.
