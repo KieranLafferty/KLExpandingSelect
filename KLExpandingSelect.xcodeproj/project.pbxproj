@@ -1,0 +1,483 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		77A6BD351661A4BE00210C61 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A6BD341661A4BE00210C61 /* UIKit.framework */; };
+		77A6BD371661A4BE00210C61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A6BD361661A4BE00210C61 /* Foundation.framework */; };
+		77A6BD391661A4BE00210C61 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A6BD381661A4BE00210C61 /* CoreGraphics.framework */; };
+		77A6BD3F1661A4BE00210C61 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77A6BD3D1661A4BE00210C61 /* InfoPlist.strings */; };
+		77A6BD411661A4BE00210C61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A6BD401661A4BE00210C61 /* main.m */; };
+		77A6BD451661A4BE00210C61 /* KLAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A6BD441661A4BE00210C61 /* KLAppDelegate.m */; };
+		77A6BD471661A4BE00210C61 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 77A6BD461661A4BE00210C61 /* Default.png */; };
+		77A6BD491661A4BE00210C61 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77A6BD481661A4BE00210C61 /* Default@2x.png */; };
+		77A6BD4B1661A4BE00210C61 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77A6BD4A1661A4BE00210C61 /* Default-568h@2x.png */; };
+		77A6BD4E1661A4BE00210C61 /* MainStoryboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77A6BD4C1661A4BE00210C61 /* MainStoryboard_iPhone.storyboard */; };
+		77A6BD511661A4BE00210C61 /* MainStoryboard_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 77A6BD4F1661A4BE00210C61 /* MainStoryboard_iPad.storyboard */; };
+		77A6BD541661A4BE00210C61 /* KLMasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A6BD531661A4BE00210C61 /* KLMasterViewController.m */; };
+		77A6BD571661A4BE00210C61 /* KLDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A6BD561661A4BE00210C61 /* KLDetailViewController.m */; };
+		77A6BD5F1661A4BE00210C61 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A6BD5E1661A4BE00210C61 /* SenTestingKit.framework */; };
+		77A6BD601661A4BE00210C61 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A6BD341661A4BE00210C61 /* UIKit.framework */; };
+		77A6BD611661A4BE00210C61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A6BD361661A4BE00210C61 /* Foundation.framework */; };
+		77A6BD691661A4BE00210C61 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77A6BD671661A4BE00210C61 /* InfoPlist.strings */; };
+		77A6BD6C1661A4BE00210C61 /* KLExpandingSelectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A6BD6B1661A4BE00210C61 /* KLExpandingSelectTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		77A6BD621661A4BE00210C61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 77A6BD271661A4BE00210C61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 77A6BD2F1661A4BE00210C61;
+			remoteInfo = KLExpandingSelect;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		77A6BD301661A4BE00210C61 /* KLExpandingSelect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KLExpandingSelect.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		77A6BD341661A4BE00210C61 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		77A6BD361661A4BE00210C61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		77A6BD381661A4BE00210C61 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		77A6BD3C1661A4BE00210C61 /* KLExpandingSelect-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KLExpandingSelect-Info.plist"; sourceTree = "<group>"; };
+		77A6BD3E1661A4BE00210C61 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		77A6BD401661A4BE00210C61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		77A6BD421661A4BE00210C61 /* KLExpandingSelect-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "KLExpandingSelect-Prefix.pch"; sourceTree = "<group>"; };
+		77A6BD431661A4BE00210C61 /* KLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLAppDelegate.h; sourceTree = "<group>"; };
+		77A6BD441661A4BE00210C61 /* KLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLAppDelegate.m; sourceTree = "<group>"; };
+		77A6BD461661A4BE00210C61 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		77A6BD481661A4BE00210C61 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		77A6BD4A1661A4BE00210C61 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		77A6BD4D1661A4BE00210C61 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPhone.storyboard; sourceTree = "<group>"; };
+		77A6BD501661A4BE00210C61 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard_iPad.storyboard; sourceTree = "<group>"; };
+		77A6BD521661A4BE00210C61 /* KLMasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLMasterViewController.h; sourceTree = "<group>"; };
+		77A6BD531661A4BE00210C61 /* KLMasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLMasterViewController.m; sourceTree = "<group>"; };
+		77A6BD551661A4BE00210C61 /* KLDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLDetailViewController.h; sourceTree = "<group>"; };
+		77A6BD561661A4BE00210C61 /* KLDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLDetailViewController.m; sourceTree = "<group>"; };
+		77A6BD5D1661A4BE00210C61 /* KLExpandingSelectTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KLExpandingSelectTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		77A6BD5E1661A4BE00210C61 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		77A6BD661661A4BE00210C61 /* KLExpandingSelectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KLExpandingSelectTests-Info.plist"; sourceTree = "<group>"; };
+		77A6BD681661A4BE00210C61 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		77A6BD6A1661A4BE00210C61 /* KLExpandingSelectTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KLExpandingSelectTests.h; sourceTree = "<group>"; };
+		77A6BD6B1661A4BE00210C61 /* KLExpandingSelectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLExpandingSelectTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		77A6BD2D1661A4BE00210C61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77A6BD351661A4BE00210C61 /* UIKit.framework in Frameworks */,
+				77A6BD371661A4BE00210C61 /* Foundation.framework in Frameworks */,
+				77A6BD391661A4BE00210C61 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77A6BD591661A4BE00210C61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77A6BD5F1661A4BE00210C61 /* SenTestingKit.framework in Frameworks */,
+				77A6BD601661A4BE00210C61 /* UIKit.framework in Frameworks */,
+				77A6BD611661A4BE00210C61 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		77A6BD251661A4BE00210C61 = {
+			isa = PBXGroup;
+			children = (
+				77A6BD3A1661A4BE00210C61 /* KLExpandingSelect */,
+				77A6BD641661A4BE00210C61 /* KLExpandingSelectTests */,
+				77A6BD331661A4BE00210C61 /* Frameworks */,
+				77A6BD311661A4BE00210C61 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		77A6BD311661A4BE00210C61 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				77A6BD301661A4BE00210C61 /* KLExpandingSelect.app */,
+				77A6BD5D1661A4BE00210C61 /* KLExpandingSelectTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		77A6BD331661A4BE00210C61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77A6BD341661A4BE00210C61 /* UIKit.framework */,
+				77A6BD361661A4BE00210C61 /* Foundation.framework */,
+				77A6BD381661A4BE00210C61 /* CoreGraphics.framework */,
+				77A6BD5E1661A4BE00210C61 /* SenTestingKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		77A6BD3A1661A4BE00210C61 /* KLExpandingSelect */ = {
+			isa = PBXGroup;
+			children = (
+				77A6BD431661A4BE00210C61 /* KLAppDelegate.h */,
+				77A6BD441661A4BE00210C61 /* KLAppDelegate.m */,
+				77A6BD4C1661A4BE00210C61 /* MainStoryboard_iPhone.storyboard */,
+				77A6BD4F1661A4BE00210C61 /* MainStoryboard_iPad.storyboard */,
+				77A6BD521661A4BE00210C61 /* KLMasterViewController.h */,
+				77A6BD531661A4BE00210C61 /* KLMasterViewController.m */,
+				77A6BD551661A4BE00210C61 /* KLDetailViewController.h */,
+				77A6BD561661A4BE00210C61 /* KLDetailViewController.m */,
+				77A6BD3B1661A4BE00210C61 /* Supporting Files */,
+			);
+			path = KLExpandingSelect;
+			sourceTree = "<group>";
+		};
+		77A6BD3B1661A4BE00210C61 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				77A6BD3C1661A4BE00210C61 /* KLExpandingSelect-Info.plist */,
+				77A6BD3D1661A4BE00210C61 /* InfoPlist.strings */,
+				77A6BD401661A4BE00210C61 /* main.m */,
+				77A6BD421661A4BE00210C61 /* KLExpandingSelect-Prefix.pch */,
+				77A6BD461661A4BE00210C61 /* Default.png */,
+				77A6BD481661A4BE00210C61 /* Default@2x.png */,
+				77A6BD4A1661A4BE00210C61 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		77A6BD641661A4BE00210C61 /* KLExpandingSelectTests */ = {
+			isa = PBXGroup;
+			children = (
+				77A6BD6A1661A4BE00210C61 /* KLExpandingSelectTests.h */,
+				77A6BD6B1661A4BE00210C61 /* KLExpandingSelectTests.m */,
+				77A6BD651661A4BE00210C61 /* Supporting Files */,
+			);
+			path = KLExpandingSelectTests;
+			sourceTree = "<group>";
+		};
+		77A6BD651661A4BE00210C61 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				77A6BD661661A4BE00210C61 /* KLExpandingSelectTests-Info.plist */,
+				77A6BD671661A4BE00210C61 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		77A6BD2F1661A4BE00210C61 /* KLExpandingSelect */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77A6BD6F1661A4BE00210C61 /* Build configuration list for PBXNativeTarget "KLExpandingSelect" */;
+			buildPhases = (
+				77A6BD2C1661A4BE00210C61 /* Sources */,
+				77A6BD2D1661A4BE00210C61 /* Frameworks */,
+				77A6BD2E1661A4BE00210C61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KLExpandingSelect;
+			productName = KLExpandingSelect;
+			productReference = 77A6BD301661A4BE00210C61 /* KLExpandingSelect.app */;
+			productType = "com.apple.product-type.application";
+		};
+		77A6BD5C1661A4BE00210C61 /* KLExpandingSelectTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 77A6BD721661A4BE00210C61 /* Build configuration list for PBXNativeTarget "KLExpandingSelectTests" */;
+			buildPhases = (
+				77A6BD581661A4BE00210C61 /* Sources */,
+				77A6BD591661A4BE00210C61 /* Frameworks */,
+				77A6BD5A1661A4BE00210C61 /* Resources */,
+				77A6BD5B1661A4BE00210C61 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				77A6BD631661A4BE00210C61 /* PBXTargetDependency */,
+			);
+			name = KLExpandingSelectTests;
+			productName = KLExpandingSelectTests;
+			productReference = 77A6BD5D1661A4BE00210C61 /* KLExpandingSelectTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		77A6BD271661A4BE00210C61 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = KL;
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Kieran Lafferty";
+			};
+			buildConfigurationList = 77A6BD2A1661A4BE00210C61 /* Build configuration list for PBXProject "KLExpandingSelect" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 77A6BD251661A4BE00210C61;
+			productRefGroup = 77A6BD311661A4BE00210C61 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				77A6BD2F1661A4BE00210C61 /* KLExpandingSelect */,
+				77A6BD5C1661A4BE00210C61 /* KLExpandingSelectTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		77A6BD2E1661A4BE00210C61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77A6BD3F1661A4BE00210C61 /* InfoPlist.strings in Resources */,
+				77A6BD471661A4BE00210C61 /* Default.png in Resources */,
+				77A6BD491661A4BE00210C61 /* Default@2x.png in Resources */,
+				77A6BD4B1661A4BE00210C61 /* Default-568h@2x.png in Resources */,
+				77A6BD4E1661A4BE00210C61 /* MainStoryboard_iPhone.storyboard in Resources */,
+				77A6BD511661A4BE00210C61 /* MainStoryboard_iPad.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77A6BD5A1661A4BE00210C61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77A6BD691661A4BE00210C61 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		77A6BD5B1661A4BE00210C61 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		77A6BD2C1661A4BE00210C61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77A6BD411661A4BE00210C61 /* main.m in Sources */,
+				77A6BD451661A4BE00210C61 /* KLAppDelegate.m in Sources */,
+				77A6BD541661A4BE00210C61 /* KLMasterViewController.m in Sources */,
+				77A6BD571661A4BE00210C61 /* KLDetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77A6BD581661A4BE00210C61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				77A6BD6C1661A4BE00210C61 /* KLExpandingSelectTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		77A6BD631661A4BE00210C61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 77A6BD2F1661A4BE00210C61 /* KLExpandingSelect */;
+			targetProxy = 77A6BD621661A4BE00210C61 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		77A6BD3D1661A4BE00210C61 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77A6BD3E1661A4BE00210C61 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		77A6BD4C1661A4BE00210C61 /* MainStoryboard_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77A6BD4D1661A4BE00210C61 /* en */,
+			);
+			name = MainStoryboard_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		77A6BD4F1661A4BE00210C61 /* MainStoryboard_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77A6BD501661A4BE00210C61 /* en */,
+			);
+			name = MainStoryboard_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		77A6BD671661A4BE00210C61 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				77A6BD681661A4BE00210C61 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		77A6BD6D1661A4BE00210C61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		77A6BD6E1661A4BE00210C61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		77A6BD701661A4BE00210C61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KLExpandingSelect/KLExpandingSelect-Prefix.pch";
+				INFOPLIST_FILE = "KLExpandingSelect/KLExpandingSelect-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		77A6BD711661A4BE00210C61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KLExpandingSelect/KLExpandingSelect-Prefix.pch";
+				INFOPLIST_FILE = "KLExpandingSelect/KLExpandingSelect-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		77A6BD731661A4BE00210C61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KLExpandingSelect.app/KLExpandingSelect";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KLExpandingSelect/KLExpandingSelect-Prefix.pch";
+				INFOPLIST_FILE = "KLExpandingSelectTests/KLExpandingSelectTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		77A6BD741661A4BE00210C61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/KLExpandingSelect.app/KLExpandingSelect";
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "KLExpandingSelect/KLExpandingSelect-Prefix.pch";
+				INFOPLIST_FILE = "KLExpandingSelectTests/KLExpandingSelectTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		77A6BD2A1661A4BE00210C61 /* Build configuration list for PBXProject "KLExpandingSelect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77A6BD6D1661A4BE00210C61 /* Debug */,
+				77A6BD6E1661A4BE00210C61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		77A6BD6F1661A4BE00210C61 /* Build configuration list for PBXNativeTarget "KLExpandingSelect" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77A6BD701661A4BE00210C61 /* Debug */,
+				77A6BD711661A4BE00210C61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		77A6BD721661A4BE00210C61 /* Build configuration list for PBXNativeTarget "KLExpandingSelectTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77A6BD731661A4BE00210C61 /* Debug */,
+				77A6BD741661A4BE00210C61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 77A6BD271661A4BE00210C61 /* Project object */;
+}
