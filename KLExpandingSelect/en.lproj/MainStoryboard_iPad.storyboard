@@ -27,7 +27,55 @@
                     <view key="view" contentMode="scaleToFill" id="LAa-rV-jwd">
                         <rect key="frame" x="0.0" y="64" width="768" height="960"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Press and hold anywhere to reveal the control" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="V9C-JY-RzR">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="0AO-os-qlo"/>
+                                    <constraint firstAttribute="height" constant="77" id="3X4-bJ-VUN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="21"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Customize the control by changing the #define values in KLExpandingSelect.m" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="mRq-SY-LmS">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="qly-Pp-XG0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="21"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Report any bugs or feature suggestions via Github" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="qAk-Fe-vgf">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="N5x-0S-SqK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="21"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Not required, but please let me know if you choose to use this in your app!" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="4gl-Kq-rn4">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="Baj-ju-zVb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="21"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.94117647059999998" green="0.94117647059999998" blue="0.90196078430000004" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="V9C-JY-RzR" firstAttribute="centerX" secondItem="LAa-rV-jwd" secondAttribute="centerX" type="default" id="0nh-bn-Iz2"/>
+                            <constraint firstItem="V9C-JY-RzR" firstAttribute="top" secondItem="LAa-rV-jwd" secondAttribute="top" constant="302" id="3qX-Av-gjE"/>
+                            <constraint firstItem="mRq-SY-LmS" firstAttribute="trailing" secondItem="qAk-Fe-vgf" secondAttribute="trailing" type="default" id="4Bx-Ds-9tv"/>
+                            <constraint firstItem="qAk-Fe-vgf" firstAttribute="leading" secondItem="4gl-Kq-rn4" secondAttribute="leading" type="default" id="5ev-1q-89A"/>
+                            <constraint firstAttribute="bottom" secondItem="4gl-Kq-rn4" secondAttribute="bottom" constant="303" id="ab5-gN-ecz"/>
+                            <constraint firstItem="mRq-SY-LmS" firstAttribute="leading" secondItem="qAk-Fe-vgf" secondAttribute="leading" type="default" id="ite-MW-MEx"/>
+                            <constraint firstItem="mRq-SY-LmS" firstAttribute="top" secondItem="LAa-rV-jwd" secondAttribute="top" constant="393" id="puT-VI-pwP"/>
+                            <constraint firstItem="V9C-JY-RzR" firstAttribute="leading" secondItem="mRq-SY-LmS" secondAttribute="leading" type="default" id="qfi-hu-RMQ"/>
+                            <constraint firstItem="mRq-SY-LmS" firstAttribute="trailing" secondItem="V9C-JY-RzR" secondAttribute="trailing" type="default" id="x2d-aj-2CI"/>
+                            <constraint firstItem="4gl-Kq-rn4" firstAttribute="top" secondItem="qAk-Fe-vgf" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="yvf-yB-33E"/>
+                            <constraint firstItem="4gl-Kq-rn4" firstAttribute="trailing" secondItem="qAk-Fe-vgf" secondAttribute="trailing" type="default" id="zCj-ZH-vaU"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="avw-P8-2Ih"/>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="blackTranslucent"/>
@@ -40,6 +88,9 @@
     <classes>
         <class className="KLRootViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/KLRootViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
         </class>
     </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
