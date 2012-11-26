@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "KLExpandingSelect.h"
-@interface KLRootViewController : UIViewController <KLExpandingSelectDataSource, KLExpandingSelectDelegate>
+#import <MessageUI/MessageUI.h>
+
+@interface KLRootViewController : UIViewController <KLExpandingSelectDataSource, KLExpandingSelectDelegate, MFMailComposeViewControllerDelegate>
 @property (nonatomic, strong) KLExpandingSelect* expandingSelect;
 @property (nonatomic, strong) NSArray* selectorData;
 @end

@@ -8,6 +8,7 @@
 
 #import "KLRootViewController.h"
 #import <Social/Social.h>
+
 #define kIndexTwitter 0
 #define kIndexFavorite 1
 #define kIndexEmail 2
@@ -75,42 +76,60 @@
 
 // Called after the user changes the selection.
 - (void)expandingSelector:(id)expandingSelect didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    SLComposeViewController* shareViewController;
+    UIImage* sharedImage = [UIImage imageNamed:@"controlShare.png"];
     
-    switch (indexPath.row) {
-        case kIndexEmail:
-            break;
-        case kIndexFaceBook:
-            shareViewController = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-            break;
-        case kIndexTwitter:
-            shareViewController = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-            break;
-        case kIndexFavorite:
-            //Handle favorites
-            break;
-        default:
-            break;
-    }
-    [shareViewController addURL:[NSURL URLWithString:@"https://github.com/KieranLafferty/KLExpandingSelect.git"]];
-    [shareViewController setInitialText:@"I'm planning on using this UI control in my next iOS app!"];
-    [shareViewController addImage:[UIImage imageNamed:@"controlShare.png"]];
-    
-    if ([SLComposeViewController isAvailableForServiceType:shareViewController.serviceType]) {
-        [self presentViewController:shareViewController
-                           animated:YES
+    if (indexPath.row == kIndexEmail) {
+        MFMailComposeViewController* mailViewController = [[MFMailComposeViewController alloc] init];
+        [mailViewController setMailComposeDelegate: self];
+        [mailViewController setSubject:@"Check out KLExpandingSelect on Github"];
+        [mailViewController setMessageBody:@"I'm planning on using this UI control in my next iOS app!\nhttps://github.com/KieranLafferty/KLExpandingSelect.git"
+                                    isHTML:NO];
+        NSData *imageAttachment = UIImageJPEGRepresentation(sharedImage,1);
+        [mailViewController addAttachmentData: imageAttachment
+                                     mimeType:@"image/png"
+                                     fileName:@"screenshot.png"];
+        [self presentViewController: mailViewController
+                           animated: YES
                          completion: nil];
+        return;
     }
     else {
-         UIAlertView* errorAlert = [[UIAlertView alloc] initWithTitle: @"Service Not Supported"
-                                                             message: @"You must go to device settings and configure the service"
-                                                            delegate: nil
-                                                   cancelButtonTitle: nil
-                                                   otherButtonTitles: nil];
-        [errorAlert show];
+        SLComposeViewController* shareViewController;
+
+        switch (indexPath.row) {
+            case kIndexEmail:
+                break;
+            case kIndexFaceBook:
+                shareViewController = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+                break;
+            case kIndexTwitter:
+                shareViewController = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+                break;
+            case kIndexFavorite:
+                //Handle favorites
+                
+                return;
+            default:
+                break;
+        }
+        [shareViewController addURL:[NSURL URLWithString:@"https://github.com/KieranLafferty/KLExpandingSelect.git"]];
+        [shareViewController setInitialText:@"I'm planning on using this UI control in my next iOS app!"];
+        [shareViewController addImage: sharedImage];
+        
+        if ([SLComposeViewController isAvailableForServiceType:shareViewController.serviceType]) {
+            [self presentViewController:shareViewController
+                               animated:YES
+                             completion: nil];
+        }
+        else {
+            UIAlertView* errorAlert = [[UIAlertView alloc] initWithTitle: @"Service Not Supported"
+                                                                 message: @"You must go to device settings and configure the service"
+                                                                delegate: nil
+                                                       cancelButtonTitle: nil
+                                                       otherButtonTitles: nil];
+            [errorAlert show];
+        }
     }
-    
-   
     NSLog(@"Did Select Index Path Fired!");
 
 }
@@ -121,5 +140,10 @@
 }
 - (void)expandingSelector:(id)expandingSelect didFinishCollapsingAtPoint:(CGPoint) point {
     NSLog(@"Finished Collapsing at point (%f, %f)", point.x, point.y);
+}
+
+#pragma mark - MFMailComposerDelegate callback - Not required by KLExpandingSelect
+- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 @end

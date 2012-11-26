@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		771EEE9F1662FB0D006A0FDD /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771EEE9E1662FB0D006A0FDD /* MessageUI.framework */; };
 		77A699671662C959004C8343 /* menuBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 77A699651662C959004C8343 /* menuBar.png */; };
 		77A699681662C959004C8343 /* menuBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77A699661662C959004C8343 /* menuBar@2x.png */; };
 		77A6BD351661A4BE00210C61 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A6BD341661A4BE00210C61 /* UIKit.framework */; };
@@ -49,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		771EEE9E1662FB0D006A0FDD /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		77A699651662C959004C8343 /* menuBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuBar.png; sourceTree = "<group>"; };
 		77A699661662C959004C8343 /* menuBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menuBar@2x.png"; sourceTree = "<group>"; };
 		77A6BD301661A4BE00210C61 /* KLExpandingSelect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KLExpandingSelect.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				771EEE9F1662FB0D006A0FDD /* MessageUI.framework in Frameworks */,
 				77C2ABFE1662F61A00EF2384 /* Social.framework in Frameworks */,
 				77A6BD881661CFD500210C61 /* QuartzCore.framework in Frameworks */,
 				77A6BD351661A4BE00210C61 /* UIKit.framework in Frameworks */,
@@ -126,6 +129,7 @@
 		77A6BD251661A4BE00210C61 = {
 			isa = PBXGroup;
 			children = (
+				771EEE9E1662FB0D006A0FDD /* MessageUI.framework */,
 				77C2ABFD1662F61A00EF2384 /* Social.framework */,
 				77A6BD8D1661DBC700210C61 /* Petal Data.plist */,
 				77A6BD871661CFD500210C61 /* QuartzCore.framework */,
