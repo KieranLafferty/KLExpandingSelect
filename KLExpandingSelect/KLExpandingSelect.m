@@ -41,6 +41,14 @@
 #import <QuartzCore/QuartzCore.h>
 
 @interface KLExpandingSelect ()
+//Growth animation
+-(void) performGrowthAnimationForPetal:(KLExpandingPetal*) petal;
+-(void) performExpandRotateAnimationForPetal:(KLExpandingPetal*) petal;
+
+//Shrink animation
+-(void) performShrinkAnimationForPetal:(KLExpandingPetal*) petal;
+-(void) performContractionRotateAnimationForPetal:(KLExpandingPetal*) petal;
+
 -(void) expandItemAtIndexPath:(NSIndexPath*) indexPath atOrigin:(CGPoint) origin withDelay:(CGFloat) delay;
 -(void) collapseItemAtIndexPath:(NSIndexPath*) indexPath withDelay:(CGFloat) delay;
 @end
@@ -122,10 +130,7 @@
         delay += kAnimationPetalDelay;
         [self addSubview:petal];
     }
-    
-    //Set the item wit
-    [[self.items objectAtIndex:0] removeFromSuperview];
-    [self addSubview:[self.items objectAtIndex:0]];
+
 }
 -(void) collapseItems {
     for (KLExpandingPetal* petal in self.items) {
@@ -134,6 +139,41 @@
                             withDelay: 0];
     }
 }
+
+-(void) performExpandRotateAnimationForPetal:(KLExpandingPetal*) petal {
+    NSIndexPath* indexPath = [self indexPathForItem:petal];
+    //  3. Rotate clockwise to the position allowing for variable numbers of items nad equal spacing between each item
+    NSInteger totalItemCount = [self.items count];
+    
+    CGFloat rotationFactor = (CGFloat)((totalItemCount - indexPath.row))/((CGFloat)totalItemCount);
+    
+    CGFloat rotationAngle = 2*M_PI*rotationFactor;
+    
+    //To force the animation to happen in clockwise, we must do two animations back to back since it will go counter clock wise if the value is greater than M_PI
+    
+    [petal rotationWithDuration: kAnimationRotateDuration
+                         angle: rotationAngle
+                       options:UIViewAnimationCurveEaseInOut
+                    completion:^(BOOL finished) {
+                        if ([self.delegate respondsToSelector:@selector(expandingSelector:didFinishExpandingPetal:)]) {
+                            [self.delegate expandingSelector: self
+                                     didFinishExpandingPetal: petal];
+                        }
+                        
+                        if ([self.delegate respondsToSelector:@selector(expandingSelector:didFinishExpandingAtPoint:)] && indexPath.row == totalItemCount - 1) {
+                            [self.delegate expandingSelector: self
+                                   didFinishExpandingAtPoint: self.center];
+                        }
+                    }];
+
+}
+-(void) performShrinkAnimationForPetal:(KLExpandingPetal*) petal {
+    
+}
+-(void) performContractionRotateAnimationForPetal:(KLExpandingPetal*) petal {
+    
+}
+
 -(NSIndexPath*) indexPathForItem:(KLExpandingPetal*) petal {
     NSInteger rowNumber = [self.items indexOfObject:petal];
     return [NSIndexPath indexPathForRow:rowNumber inSection:0];
@@ -164,29 +204,12 @@
                 
 
                      } completion:^(BOOL finished) {
-                         //  3. Rotate clockwise to the position allowing for variable numbers of items nad equal spacing between each item
                          NSInteger totalItemCount = [self.items count];
-                         
-                         CGFloat rotationFactor = (CGFloat)((totalItemCount - indexPath.row) % totalItemCount)/((CGFloat)totalItemCount);
-
-                         CGFloat rotationAngle = 2*M_PI*rotationFactor;
-                         
-                         //To force the animation to happen in clockwise, we must do two animations back to back since it will go counter clock wise if the value is greater than M_PI
-
-                         [item rotationWithDuration: kAnimationRotateDuration
-                                              angle: rotationAngle
-                                            options:UIViewAnimationCurveEaseInOut
-                                         completion:^(BOOL finished) {
-                                             if ([self.delegate respondsToSelector:@selector(expandingSelector:didFinishExpandingPetal:)]) {
-                                                 [self.delegate expandingSelector: self
-                                                          didFinishExpandingPetal: item];
-                                             }
-                                             
-                                             if ([self.delegate respondsToSelector:@selector(expandingSelector:didFinishExpandingAtPoint:)] && indexPath.row == totalItemCount - 1) {
-                                                 [self.delegate expandingSelector: self
-                                                        didFinishExpandingAtPoint: origin];
-                                             }
-                                         }];
+                         if ([[self indexPathForItem:item] row] == totalItemCount - 1) {
+                             for (KLExpandingPetal* petal in self.items) {
+                                 [self performExpandRotateAnimationForPetal:petal];
+                             }
+                         }
                      }];
 
 }
