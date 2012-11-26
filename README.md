@@ -7,7 +7,7 @@ Have a  menu appear exposing beautiful and easy to access buttons to the user wi
 
 Note: KLExpandingSelect is intended for use with portrait orientation on iPhone/iPad/iPod Touch.
 
-[Check out the Demo](http://www.youtube.com/watch?v=nc8JDvieUbU&feature=youtube_gdata_player) *Excuse the graphics glitches and lag due to my slow computer.*
+[Check out the Demo](http://www.youtube.com/watch?v=PQZiZt5d5bY&feature=youtube_gdata_player) *Excuse the graphics glitches and lag due to my slow computer.*
 
 ## Installation ##
 
