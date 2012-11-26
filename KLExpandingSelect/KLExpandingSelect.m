@@ -42,12 +42,10 @@
 
 @interface KLExpandingSelect ()
 //Growth animation
--(void) performGrowthAnimationForPetal:(KLExpandingPetal*) petal;
 -(void) performExpandRotateAnimationForPetal:(KLExpandingPetal*) petal;
 
 //Shrink animation
 -(void) performShrinkAnimationForPetal:(KLExpandingPetal*) petal withDelay:(CGFloat) delay;
--(void) performContractionRotateAnimationForPetal:(KLExpandingPetal*) petal;
 
 -(void) expandItemAtIndexPath:(NSIndexPath*) indexPath atOrigin:(CGPoint) origin withDelay:(CGFloat) delay;
 -(void) collapseItemAtIndexPath:(NSIndexPath*) indexPath withDelay:(CGFloat) delay;
@@ -97,7 +95,7 @@
     }
     
     //Copy the items into the local storage array 
-    self.items = (NSArray*) mutableItems;
+    self.petals = (NSArray*) mutableItems;
     
 }
 -(void) didSelectPetal:(KLExpandingPetal*) petal {
@@ -121,7 +119,7 @@
 
 -(void) expandItemsAtPoint:(CGPoint) point {
     CGFloat delay = 0.0;
-    for (KLExpandingPetal* petal in self.items) {
+    for (KLExpandingPetal* petal in self.petals) {
         NSIndexPath* indexPath = [self indexPathForItem:petal];
         
         [self expandItemAtIndexPath: indexPath
@@ -133,7 +131,7 @@
 
 }
 -(void) collapseItems {
-    for (KLExpandingPetal* petal in self.items) {
+    for (KLExpandingPetal* petal in self.petals) {
         NSIndexPath* indexPath = [self indexPathForItem:petal];
         [self collapseItemAtIndexPath: indexPath
                             withDelay: 0];
@@ -143,7 +141,7 @@
 -(void) performExpandRotateAnimationForPetal:(KLExpandingPetal*) petal {
     NSIndexPath* indexPath = [self indexPathForItem:petal];
     //  3. Rotate clockwise to the position allowing for variable numbers of items nad equal spacing between each item
-    NSInteger totalItemCount = [self.items count];
+    NSInteger totalItemCount = [self.petals count];
     
     CGFloat rotationFactor = (CGFloat)((totalItemCount - indexPath.row))/((CGFloat)totalItemCount);
     
@@ -169,7 +167,7 @@
 }
 -(void) performShrinkAnimationForPetal:(KLExpandingPetal*) petal withDelay:(CGFloat) delay {
     NSIndexPath* indexPath = [self indexPathForItem:petal];
-    NSInteger totalItemCount = [self.items count];
+    NSInteger totalItemCount = [self.petals count];
     
     [UIView animateWithDuration: kAnimationGrowDuration
                           delay: delay
@@ -191,7 +189,7 @@
 }
 
 -(NSIndexPath*) indexPathForItem:(KLExpandingPetal*) petal {
-    NSInteger rowNumber = [self.items indexOfObject:petal];
+    NSInteger rowNumber = [self.petals indexOfObject:petal];
     return [NSIndexPath indexPathForRow:rowNumber inSection:0];
 }
 -(void) expandItemAtIndexPath:(NSIndexPath*) indexPath atOrigin:(CGPoint) origin withDelay:(CGFloat) delay{
@@ -199,7 +197,7 @@
     [self setCenter: origin];
     [self setHidden: NO];
 
-    KLExpandingPetal* item = [self.items objectAtIndex: indexPath.row];
+    KLExpandingPetal* item = [self.petals objectAtIndex: indexPath.row];
 
 
     //Get the center point of the control to determine where the animation should originate from
@@ -219,9 +217,9 @@
                          [item.layer setTransform:CATransform3DScale(item.layer.transform, kAnimationPetalMaxScale, kAnimationPetalMaxScale, 1)];
 
                      } completion:^(BOOL finished) {
-                         NSInteger totalItemCount = [self.items count];
+                         NSInteger totalItemCount = [self.petals count];
                          if ([[self indexPathForItem:item] row] == totalItemCount - 1) {
-                             for (KLExpandingPetal* petal in self.items) {
+                             for (KLExpandingPetal* petal in self.petals) {
                                  [self performExpandRotateAnimationForPetal:petal];
                              }
                          }
@@ -230,9 +228,9 @@
 
 -(void) collapseItemAtIndexPath:(NSIndexPath*) indexPath withDelay:(CGFloat) delay {
     //Reverse what was done in expand    
-    KLExpandingPetal* item = [self.items objectAtIndex: indexPath.row];
+    KLExpandingPetal* item = [self.petals objectAtIndex: indexPath.row];
     
-    NSInteger totalItemCount = [self.items count];
+    NSInteger totalItemCount = [self.petals count];
     
     CGFloat rotationFactor = (CGFloat)((totalItemCount - indexPath.row) % totalItemCount)/((CGFloat)totalItemCount);
     
@@ -248,7 +246,7 @@
                              CGFloat delay = 0;
                              delay += kAnimationPetalDelay;
 
-                             for (KLExpandingPetal* petal in [[self.items reverseObjectEnumerator] allObjects]) {
+                             for (KLExpandingPetal* petal in [[self.petals reverseObjectEnumerator] allObjects]) {
                                  [self performShrinkAnimationForPetal:petal withDelay:delay];
                                  delay += kAnimationPetalDelay;
                              }

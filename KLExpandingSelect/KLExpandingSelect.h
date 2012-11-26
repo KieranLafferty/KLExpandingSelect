@@ -42,7 +42,7 @@
 @end
 
 @interface KLExpandingSelect : UIView
-@property (nonatomic, strong) NSArray* items;    //Must be set to with objects of type KLExpandingPetal. Operates as a stack.
+@property (nonatomic, strong) NSArray* petals;    //Must be set to with objects of type KLExpandingPetal. Operates as a stack.
 @property (nonatomic, strong) id<KLExpandingSelectDataSource> dataSource;
 @property (nonatomic, strong) id<KLExpandingSelectDelegate> delegate;
 @property (nonatomic, strong) UIView* receivingView;    //View to monitor touch events on to initiate the action
