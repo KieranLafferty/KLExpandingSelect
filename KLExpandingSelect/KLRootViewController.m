@@ -7,6 +7,11 @@
 //
 
 #import "KLRootViewController.h"
+#import <Social/Social.h>
+#define kIndexTwitter 0
+#define kIndexFavorite 1
+#define kIndexEmail 2
+#define kIndexFaceBook 3
 
 @interface KLRootViewController ()
 
@@ -70,6 +75,42 @@
 
 // Called after the user changes the selection.
 - (void)expandingSelector:(id)expandingSelect didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    SLComposeViewController* shareViewController;
+    
+    switch (indexPath.row) {
+        case kIndexEmail:
+            break;
+        case kIndexFaceBook:
+            shareViewController = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+            break;
+        case kIndexTwitter:
+            shareViewController = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+            break;
+        case kIndexFavorite:
+            //Handle favorites
+            break;
+        default:
+            break;
+    }
+    [shareViewController addURL:[NSURL URLWithString:@"https://github.com/KieranLafferty/KLExpandingSelect.git"]];
+    [shareViewController setInitialText:@"I'm planning on using this UI control in my next iOS app!"];
+    [shareViewController addImage:[UIImage imageNamed:@"controlShare.png"]];
+    
+    if ([SLComposeViewController isAvailableForServiceType:shareViewController.serviceType]) {
+        [self presentViewController:shareViewController
+                           animated:YES
+                         completion: nil];
+    }
+    else {
+         UIAlertView* errorAlert = [[UIAlertView alloc] initWithTitle: @"Service Not Supported"
+                                                             message: @"You must go to device settings and configure the service"
+                                                            delegate: nil
+                                                   cancelButtonTitle: nil
+                                                   otherButtonTitles: nil];
+        [errorAlert show];
+    }
+    
+   
     NSLog(@"Did Select Index Path Fired!");
 
 }

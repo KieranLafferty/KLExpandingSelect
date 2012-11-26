@@ -34,6 +34,8 @@
 		77A6BD861661BF4E00210C61 /* petal-unsave@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77A6BD811661BF4E00210C61 /* petal-unsave@2x.png */; };
 		77A6BD881661CFD500210C61 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A6BD871661CFD500210C61 /* QuartzCore.framework */; };
 		77A6BD8E1661DBC700210C61 /* Petal Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77A6BD8D1661DBC700210C61 /* Petal Data.plist */; };
+		77C2ABFE1662F61A00EF2384 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C2ABFD1662F61A00EF2384 /* Social.framework */; };
+		77C2AC011662F7BA00EF2384 /* controlShare.png in Resources */ = {isa = PBXBuildFile; fileRef = 77C2AC001662F7BA00EF2384 /* controlShare.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,8 @@
 		77A6BD811661BF4E00210C61 /* petal-unsave@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "petal-unsave@2x.png"; sourceTree = "<group>"; };
 		77A6BD871661CFD500210C61 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		77A6BD8D1661DBC700210C61 /* Petal Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Petal Data.plist"; sourceTree = "<group>"; };
+		77C2ABFD1662F61A00EF2384 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		77C2AC001662F7BA00EF2384 /* controlShare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controlShare.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77C2ABFE1662F61A00EF2384 /* Social.framework in Frameworks */,
 				77A6BD881661CFD500210C61 /* QuartzCore.framework in Frameworks */,
 				77A6BD351661A4BE00210C61 /* UIKit.framework in Frameworks */,
 				77A6BD371661A4BE00210C61 /* Foundation.framework in Frameworks */,
@@ -111,6 +116,7 @@
 		77A699641662C93C004C8343 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				77C2AC001662F7BA00EF2384 /* controlShare.png */,
 				77A699651662C959004C8343 /* menuBar.png */,
 				77A699661662C959004C8343 /* menuBar@2x.png */,
 			);
@@ -120,6 +126,7 @@
 		77A6BD251661A4BE00210C61 = {
 			isa = PBXGroup;
 			children = (
+				77C2ABFD1662F61A00EF2384 /* Social.framework */,
 				77A6BD8D1661DBC700210C61 /* Petal Data.plist */,
 				77A6BD871661CFD500210C61 /* QuartzCore.framework */,
 				77A6BD3A1661A4BE00210C61 /* KLExpandingSelect */,
@@ -306,6 +313,7 @@
 				77A6BD8E1661DBC700210C61 /* Petal Data.plist in Resources */,
 				77A699671662C959004C8343 /* menuBar.png in Resources */,
 				77A699681662C959004C8343 /* menuBar@2x.png in Resources */,
+				77C2AC011662F7BA00EF2384 /* controlShare.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

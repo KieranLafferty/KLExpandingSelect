@@ -104,10 +104,11 @@
     [self collapseItems];
     
     //Fire delegate callback informing of selection
-    if ([self.delegate respondsToSelector:@selector(expandingSelector:didDeselectItemAtIndexPath:)]) {
+    if ([self.delegate respondsToSelector:@selector(expandingSelector:didSelectItemAtIndexPath:)]) {
         [self.delegate expandingSelector:self
                 didSelectItemAtIndexPath:indexPath];
     }
+        
 }
 
 -(void) expandItemsAtPoint:(CGPoint) point {
