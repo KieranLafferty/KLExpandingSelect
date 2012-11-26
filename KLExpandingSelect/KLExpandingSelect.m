@@ -18,7 +18,7 @@
 
 //Animation Settings
 #define kAnimationGrowDuration 0.3
-#define kAnimationRotateDuration 0.4
+#define kAnimationRotateDuration 0.3
 #define kAnimationVerticalOffset 3      //Measured in pixels, this variable sets how high the  items will animate before beginning their rotation
 #define kAnimationPetalSpread 1.003     //A tuning parameter for determining how crowded petals are with respect to eachother
 #define kAnimationPetalDelay 0.1        //The amount of time between animating each petal
@@ -46,7 +46,7 @@
 -(void) performExpandRotateAnimationForPetal:(KLExpandingPetal*) petal;
 
 //Shrink animation
--(void) performShrinkAnimationForPetal:(KLExpandingPetal*) petal;
+-(void) performShrinkAnimationForPetal:(KLExpandingPetal*) petal withDelay:(CGFloat) delay;
 -(void) performContractionRotateAnimationForPetal:(KLExpandingPetal*) petal;
 
 -(void) expandItemAtIndexPath:(NSIndexPath*) indexPath atOrigin:(CGPoint) origin withDelay:(CGFloat) delay;
@@ -167,11 +167,27 @@
                     }];
 
 }
--(void) performShrinkAnimationForPetal:(KLExpandingPetal*) petal {
+-(void) performShrinkAnimationForPetal:(KLExpandingPetal*) petal withDelay:(CGFloat) delay {
+    NSIndexPath* indexPath = [self indexPathForItem:petal];
+    NSInteger totalItemCount = [self.items count];
     
-}
--(void) performContractionRotateAnimationForPetal:(KLExpandingPetal*) petal {
-    
+    [UIView animateWithDuration: kAnimationGrowDuration
+                          delay: delay
+                        options: UIViewAnimationOptionCurveEaseInOut
+                     animations:^{
+                         [petal.layer setTransform:CATransform3DScale(petal.layer.transform, kAnimationPetalMinScale, kAnimationPetalMinScale, 1)];
+                     } completion:^(BOOL finished) {
+                         if ([self.delegate respondsToSelector:@selector(expandingSelector:didFinishCollapsingPetal:)]) {
+                             [self.delegate expandingSelector: self
+                                     didFinishCollapsingPetal: petal];
+                         }
+                         if ([self.delegate respondsToSelector:@selector(expandingSelector:didFinishCollapsingAtPoint:)] && indexPath.row == totalItemCount - 1) {
+                             [self.delegate expandingSelector:self didFinishCollapsingAtPoint:self.center];
+                         }
+                         if ([[self indexPathForItem: petal] row] == 0) {
+                             [self setHidden:YES];
+                         }
+                     }];
 }
 
 -(NSIndexPath*) indexPathForItem:(KLExpandingPetal*) petal {
@@ -201,7 +217,6 @@
                         options: UIViewAnimationOptionCurveEaseInOut
                      animations:^{
                          [item.layer setTransform:CATransform3DScale(item.layer.transform, kAnimationPetalMaxScale, kAnimationPetalMaxScale, 1)];
-                
 
                      } completion:^(BOOL finished) {
                          NSInteger totalItemCount = [self.items count];
@@ -211,7 +226,6 @@
                              }
                          }
                      }];
-
 }
 
 -(void) collapseItemAtIndexPath:(NSIndexPath*) indexPath withDelay:(CGFloat) delay {
@@ -230,22 +244,15 @@
                      animations:^{
                          [item.layer setTransform: CATransform3DRotate(item.layer.transform, 2*M_PI - rotationAngle, 0.0, 0.0, 1.0)];
                      } completion:^(BOOL finished) {
-                         [UIView animateWithDuration: kAnimationGrowDuration
-                                               delay: 0.0
-                                             options: UIViewAnimationOptionCurveEaseInOut
-                                          animations:^{
-                                              [item.layer setTransform:CATransform3DScale(item.layer.transform, kAnimationPetalMinScale, kAnimationPetalMinScale, 1)];
-                                          } completion:^(BOOL finished) {
-                                              if ([self.delegate respondsToSelector:@selector(expandingSelector:didFinishCollapsingPetal:)]) {
-                                                  [self.delegate expandingSelector: self
-                                                          didFinishCollapsingPetal: item];
-                                              }
-                                              if ([self.delegate respondsToSelector:@selector(expandingSelector:didFinishCollapsingAtPoint:)] && indexPath.row == totalItemCount - 1) {
-                                                  [self.delegate expandingSelector:self didFinishCollapsingAtPoint:self.center];
-                                              }
-                                              [self setHidden:YES];
-                                          }];
-                         
+                         if ([[self indexPathForItem:item] row] == totalItemCount -1) {
+                             CGFloat delay = 0;
+                             delay += kAnimationPetalDelay;
+
+                             for (KLExpandingPetal* petal in [[self.items reverseObjectEnumerator] allObjects]) {
+                                 [self performShrinkAnimationForPetal:petal withDelay:delay];
+                                 delay += kAnimationPetalDelay;
+                             }
+                         }
                      }];
 }
 -(void) longPressDidFire: (UILongPressGestureRecognizer*) recognizer {
