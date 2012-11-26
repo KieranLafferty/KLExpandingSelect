@@ -129,10 +129,7 @@
 		77A6BD251661A4BE00210C61 = {
 			isa = PBXGroup;
 			children = (
-				771EEE9E1662FB0D006A0FDD /* MessageUI.framework */,
-				77C2ABFD1662F61A00EF2384 /* Social.framework */,
 				77A6BD8D1661DBC700210C61 /* Petal Data.plist */,
-				77A6BD871661CFD500210C61 /* QuartzCore.framework */,
 				77A6BD3A1661A4BE00210C61 /* KLExpandingSelect */,
 				77A6BD641661A4BE00210C61 /* KLExpandingSelectTests */,
 				77A6BD331661A4BE00210C61 /* Frameworks */,
@@ -152,6 +149,9 @@
 		77A6BD331661A4BE00210C61 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				771EEE9E1662FB0D006A0FDD /* MessageUI.framework */,
+				77C2ABFD1662F61A00EF2384 /* Social.framework */,
+				77A6BD871661CFD500210C61 /* QuartzCore.framework */,
 				77A6BD341661A4BE00210C61 /* UIKit.framework */,
 				77A6BD361661A4BE00210C61 /* Foundation.framework */,
 				77A6BD381661A4BE00210C61 /* CoreGraphics.framework */,
