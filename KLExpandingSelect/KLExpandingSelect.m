@@ -113,22 +113,25 @@
 
 -(void) expandItemsAtPoint:(CGPoint) point {
     CGFloat delay = 0.0;
-    for (NSInteger count = 0; count < [self.items count]; count ++) {
-        NSIndexPath* indexPath = [NSIndexPath indexPathForRow:count inSection:0];
+    for (KLExpandingPetal* petal in self.items) {
+        NSIndexPath* indexPath = [self indexPathForItem:petal];
         
         [self expandItemAtIndexPath: indexPath
                            atOrigin: point
                           withDelay: delay];
         delay += kAnimationPetalDelay;
-        
+        [self addSubview:petal];
     }
+    
+    //Set the item wit
+    [[self.items objectAtIndex:0] removeFromSuperview];
+    [self addSubview:[self.items objectAtIndex:0]];
 }
 -(void) collapseItems {
     for (KLExpandingPetal* petal in self.items) {
         NSIndexPath* indexPath = [self indexPathForItem:petal];
         [self collapseItemAtIndexPath: indexPath
                             withDelay: 0];
-        
     }
 }
 -(NSIndexPath*) indexPathForItem:(KLExpandingPetal*) petal {
@@ -148,7 +151,6 @@
     //  1. Grow from size (0,0) and move upwards as specified by the constants above
     [item.layer setTransform:CATransform3DMakeScale(kAnimationPetalMinScale, kAnimationPetalMinScale, 1)];
     [item setCenter:CGPointMake(self.frame.size.width/2.0, self.frame.size.height/2.0)];
-    [self addSubview:item];
     
     //  2. Set the anchor point to X = width/2 and Y = height + y animated offset from 1.
     CGPoint anchorPoint = CGPointMake(0.5, kAnimationPetalSpread);
