@@ -29,7 +29,7 @@
 #define kAnimationPetalMaxScale 1000      //Scale of the item at its largest (relative to on kAnimationPetalMinScale)
 
 //Customize the layout of the control
-#define kDefaultRotation 256.0          //Degrees to rotate the control
+#define kDefaultRotation 0.0          //Degrees to rotate the control
 #define kDefaultHeight 2*kPetalHeight + 2*kAnimationVerticalOffset      //The height of the control upon full expansion
 #define kDefaultWidth kDefaultHeight    //The width of the control upon full expansion
 #define kDefaultTopMargin kPetalHeight  //Amount of space to reserve the top to ensure that the control doesnt get drawn off screen
