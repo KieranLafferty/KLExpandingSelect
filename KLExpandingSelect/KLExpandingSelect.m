@@ -17,6 +17,8 @@
 #define kPetalAlpha 0.96
 
 //Animation Settings
+#define KAnimationFanOutDegrees 360.0   //Amount  for the control to fan out 360 = fully fanned out, 180 = half fanned out
+
 #define kAnimationGrowDuration 0.3
 #define kAnimationRotateDuration 0.3
 #define kAnimationVerticalOffset 3      //Measured in pixels, this variable sets how high the  items will animate before beginning their rotation
@@ -27,6 +29,7 @@
 #define kAnimationPetalMaxScale 1000      //Scale of the item at its largest (relative to on kAnimationPetalMinScale)
 
 //Customize the layout of the control
+#define kDefaultRotation 256.0          //Degrees to rotate the control
 #define kDefaultHeight 2*kPetalHeight + 2*kAnimationVerticalOffset      //The height of the control upon full expansion
 #define kDefaultWidth kDefaultHeight    //The width of the control upon full expansion
 #define kDefaultTopMargin kPetalHeight  //Amount of space to reserve the top to ensure that the control doesnt get drawn off screen
@@ -36,6 +39,12 @@
 #define kDefaultRasterizationScale 5.0
 
 #define kTouchDuration 1.0
+
+/** Degrees to Radian **/
+#define degreesToRadians( degrees ) ( ( degrees ) / 180.0 * M_PI )
+
+/** Radians to Degrees **/
+#define radiansToDegrees( radians ) ( ( radians ) * ( 180.0 / M_PI ) )
 
 #import "KLExpandingSelect.h"
 #import <QuartzCore/QuartzCore.h>
@@ -56,6 +65,7 @@
 
 -(id) initWithDelegate:(id<KLExpandingSelectDelegate>) delegate dataSource: (id<KLExpandingSelectDataSource>) dataSource {
     if (self = [super initWithFrame:CGRectMake(0, 0, kDefaultWidth, kDefaultHeight)]) {
+        [self setTransform:CGAffineTransformMakeRotation(degreesToRadians(kDefaultRotation))];
         //Initialize the data source and delegate variables
         self.dataSource = dataSource;
         self.delegate = delegate;
@@ -145,7 +155,8 @@
     
     CGFloat rotationFactor = (CGFloat)((totalItemCount - indexPath.row))/((CGFloat)totalItemCount);
     
-    CGFloat rotationAngle = 2*M_PI*rotationFactor;
+    CGFloat rotationAngle = 2*M_PI*rotationFactor*(degreesToRadians(KAnimationFanOutDegrees)/degreesToRadians(360.0));
+    
     
     //To force the animation to happen in clockwise, we must do two animations back to back since it will go counter clock wise if the value is greater than M_PI
     
@@ -232,9 +243,9 @@
     
     NSInteger totalItemCount = [self.petals count];
     
-    CGFloat rotationFactor = (CGFloat)((totalItemCount - indexPath.row) % totalItemCount)/((CGFloat)totalItemCount);
+    CGFloat rotationFactor = (CGFloat)((totalItemCount - indexPath.row))/((CGFloat)totalItemCount);
     
-    CGFloat rotationAngle = 2*M_PI*rotationFactor;
+    CGFloat rotationAngle = 2*M_PI*rotationFactor*(degreesToRadians(KAnimationFanOutDegrees)/degreesToRadians(360.0));
     
     [UIView animateWithDuration: kAnimationRotateDuration
                           delay: 0.0
