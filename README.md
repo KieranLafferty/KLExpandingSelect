@@ -71,18 +71,21 @@ The visual appearance can be tweaked by changing the constants in <code>KLExpand
 	#define kPetalShadowOpacity 0.6
 	#define kPetalShadowRadius 4
 	#define kPetalAlpha 0.96
-	
+
 	//Animation Settings
+	#define KAnimationFanOutDegrees 360.0   //Amount  for the control to fan out 360 = fully fanned out, 180 = half fanned out
+
 	#define kAnimationGrowDuration 0.3
-	#define kAnimationRotateDuration 0.4
+	#define kAnimationRotateDuration 0.3
 	#define kAnimationVerticalOffset 3      //Measured in pixels, this variable sets how high the  items will animate before beginning their rotation
 	#define kAnimationPetalSpread 1.003     //A tuning parameter for determining how crowded petals are with respect to eachother
 	#define kAnimationPetalDelay 0.1        //The amount of time between animating each petal
-	
+
 	#define kAnimationPetalMinScale 0.001   //Scale of the item at its smallest (i.e 0.01 is 1/100th its original size
 	#define kAnimationPetalMaxScale 1000      //Scale of the item at its largest (relative to on kAnimationPetalMinScale)
-	
+
 	//Customize the layout of the control
+	#define kDefaultRotation 0.0          //Degrees to rotate the control
 	#define kDefaultHeight 2*kPetalHeight + 2*kAnimationVerticalOffset      //The height of the control upon full expansion
 	#define kDefaultWidth kDefaultHeight    //The width of the control upon full expansion
 	#define kDefaultTopMargin kPetalHeight  //Amount of space to reserve the top to ensure that the control doesnt get drawn off screen
@@ -90,8 +93,8 @@ The visual appearance can be tweaked by changing the constants in <code>KLExpand
 	#define kDefaultBottomMargin kPetalHeight  //Amount of space to reserve the bottom to ensure that the control doesnt get drawn off screen
 	#define kDefaultLeftMargin kPetalWidth  //Amount of space to reserve the left to ensure that the control doesnt get drawn off screen
 	#define kDefaultRasterizationScale 5.0
-	
-	#define kTouchDuration 1.0
+
+	#define kLongPressDuration 1.0          //The length of time before a touch is registered and the control appears on the parent view
 
 
 ## Contact ##

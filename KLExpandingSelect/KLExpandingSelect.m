@@ -38,7 +38,7 @@
 #define kDefaultLeftMargin kPetalWidth  //Amount of space to reserve the left to ensure that the control doesnt get drawn off screen
 #define kDefaultRasterizationScale 5.0
 
-#define kTouchDuration 1.0
+#define kLongPressDuration 1.0          //The length of time before a touch is registered and the control appears on the parent view
 
 /** Degrees to Radian **/
 #define degreesToRadians( degrees ) ( ( degrees ) / 180.0 * M_PI )
@@ -305,7 +305,7 @@
                                                                                                     action:@selector(longPressDidFire:)];
     
     //Set the default time length for the touch to fire
-    [gestureRecognizer setMinimumPressDuration: kTouchDuration];
+    [gestureRecognizer setMinimumPressDuration: kLongPressDuration];
     
     //Add recognizer to the view
     [self addGestureRecognizer:gestureRecognizer];
