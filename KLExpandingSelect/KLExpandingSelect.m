@@ -30,7 +30,7 @@
 
 //Customize the layout of the control
 #define kDefaultRotation 0.0          //Degrees to rotate the control
-#define kDefaultHeight 2*kPetalHeight + 2*kAnimationVerticalOffset      //The height of the control upon full expansion
+#define kDefaultHeight 2*kPetalHeight*kAnimationPetalSpread + 2*kAnimationVerticalOffset      //The height of the control upon full expansion
 #define kDefaultWidth kDefaultHeight    //The width of the control upon full expansion
 #define kDefaultTopMargin kPetalHeight  //Amount of space to reserve the top to ensure that the control doesnt get drawn off screen
 #define kDefaultRightMargin kPetalWidth //Amount of space to reserve the right to ensure that the control doesnt get drawn off screen
