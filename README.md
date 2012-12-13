@@ -74,10 +74,8 @@ The visual appearance can be tweaked by changing the constants in <code>KLExpand
 
 	//Animation Settings
 	#define KAnimationFanOutDegrees 360.0   //Amount  for the control to fan out 360 = fully fanned out, 180 = half fanned out
-
 	#define kAnimationGrowDuration 0.3
 	#define kAnimationRotateDuration 0.3
-	#define kAnimationVerticalOffset 3      //Measured in pixels, this variable sets how high the  items will animate before beginning their rotation
 	#define kAnimationPetalSpread 1.003     //A tuning parameter for determining how crowded petals are with respect to eachother
 	#define kAnimationPetalDelay 0.1        //The amount of time between animating each petal
 
@@ -86,7 +84,7 @@ The visual appearance can be tweaked by changing the constants in <code>KLExpand
 
 	//Customize the layout of the control
 	#define kDefaultRotation 0.0          //Degrees to rotate the control
-	#define kDefaultHeight 2*kPetalHeight + 2*kAnimationVerticalOffset      //The height of the control upon full expansion
+	#define kDefaultHeight 2*kPetalHeight      //The height of the control upon full expansion
 	#define kDefaultWidth kDefaultHeight    //The width of the control upon full expansion
 	#define kDefaultTopMargin kPetalHeight  //Amount of space to reserve the top to ensure that the control doesnt get drawn off screen
 	#define kDefaultRightMargin kPetalWidth //Amount of space to reserve the right to ensure that the control doesnt get drawn off screen
