@@ -30,10 +30,10 @@
 #define kDefaultRotation 0.0          //Degrees to rotate the control
 #define kDefaultHeight 2*kPetalHeight*kAnimationPetalSpread     //The height of the control upon full expansion
 #define kDefaultWidth kDefaultHeight    //The width of the control upon full expansion
-#define kDefaultTopMargin kPetalHeight  //Amount of space to reserve the top to ensure that the control doesnt get drawn off screen
-#define kDefaultRightMargin kPetalWidth //Amount of space to reserve the right to ensure that the control doesnt get drawn off screen
-#define kDefaultBottomMargin kPetalHeight  //Amount of space to reserve the bottom to ensure that the control doesnt get drawn off screen
-#define kDefaultLeftMargin kPetalWidth  //Amount of space to reserve the left to ensure that the control doesnt get drawn off screen
+#define kDefaultTopMargin kPetalHeight*kAnimationPetalSpread  //Amount of space to reserve the top to ensure that the control doesnt get drawn off screen
+#define kDefaultRightMargin kPetalHeight*kAnimationPetalSpread //Amount of space to reserve the right to ensure that the control doesnt get drawn off screen
+#define kDefaultBottomMargin kPetalHeight*kAnimationPetalSpread  //Amount of space to reserve the bottom to ensure that the control doesnt get drawn off screen
+#define kDefaultLeftMargin kPetalHeight*kAnimationPetalSpread  //Amount of space to reserve the left to ensure that the control doesnt get drawn off screen
 #define kDefaultRasterizationScale 5.0
 
 #define kLongPressDuration 1.0          //The length of time before a touch is registered and the control appears on the parent view
