@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		185684BA16841FC100D0B608 /* KLExpandingSelect.m in Sources */ = {isa = PBXBuildFile; fileRef = 185684B916841FC100D0B608 /* KLExpandingSelect.m */; };
+		185684C216841FCE00D0B608 /* Petal Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 185684BC16841FCE00D0B608 /* Petal Data.plist */; };
+		185684C316841FCE00D0B608 /* petal-email@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 185684BD16841FCE00D0B608 /* petal-email@2x.png */; };
+		185684C416841FCE00D0B608 /* petal-facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 185684BE16841FCE00D0B608 /* petal-facebook@2x.png */; };
+		185684C516841FCE00D0B608 /* petal-save@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 185684BF16841FCE00D0B608 /* petal-save@2x.png */; };
+		185684C616841FCE00D0B608 /* petal-twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 185684C016841FCE00D0B608 /* petal-twitter@2x.png */; };
+		185684C716841FCE00D0B608 /* petal-unsave@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 185684C116841FCE00D0B608 /* petal-unsave@2x.png */; };
+		185684C816841FE400D0B608 /* KLExpandingSelect.m in Sources */ = {isa = PBXBuildFile; fileRef = 185684B916841FC100D0B608 /* KLExpandingSelect.m */; };
 		771EEE9F1662FB0D006A0FDD /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 771EEE9E1662FB0D006A0FDD /* MessageUI.framework */; };
 		77A699671662C959004C8343 /* menuBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 77A699651662C959004C8343 /* menuBar.png */; };
 		77A699681662C959004C8343 /* menuBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77A699661662C959004C8343 /* menuBar@2x.png */; };
@@ -27,14 +35,7 @@
 		77A6BD691661A4BE00210C61 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 77A6BD671661A4BE00210C61 /* InfoPlist.strings */; };
 		77A6BD6C1661A4BE00210C61 /* KLExpandingSelectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A6BD6B1661A4BE00210C61 /* KLExpandingSelectTests.m */; };
 		77A6BD771661A57300210C61 /* KLRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A6BD761661A57300210C61 /* KLRootViewController.m */; };
-		77A6BD7B1661A62A00210C61 /* KLExpandingSelect.m in Sources */ = {isa = PBXBuildFile; fileRef = 77A6BD7A1661A62A00210C61 /* KLExpandingSelect.m */; };
-		77A6BD821661BF4E00210C61 /* petal-email@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77A6BD7D1661BF4E00210C61 /* petal-email@2x.png */; };
-		77A6BD831661BF4E00210C61 /* petal-facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77A6BD7E1661BF4E00210C61 /* petal-facebook@2x.png */; };
-		77A6BD841661BF4E00210C61 /* petal-save@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77A6BD7F1661BF4E00210C61 /* petal-save@2x.png */; };
-		77A6BD851661BF4E00210C61 /* petal-twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77A6BD801661BF4E00210C61 /* petal-twitter@2x.png */; };
-		77A6BD861661BF4E00210C61 /* petal-unsave@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 77A6BD811661BF4E00210C61 /* petal-unsave@2x.png */; };
 		77A6BD881661CFD500210C61 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77A6BD871661CFD500210C61 /* QuartzCore.framework */; };
-		77A6BD8E1661DBC700210C61 /* Petal Data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 77A6BD8D1661DBC700210C61 /* Petal Data.plist */; };
 		77C2ABFE1662F61A00EF2384 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C2ABFD1662F61A00EF2384 /* Social.framework */; };
 		77C2AC011662F7BA00EF2384 /* controlShare.png in Resources */ = {isa = PBXBuildFile; fileRef = 77C2AC001662F7BA00EF2384 /* controlShare.png */; };
 /* End PBXBuildFile section */
@@ -50,6 +51,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		185684B816841FC100D0B608 /* KLExpandingSelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLExpandingSelect.h; sourceTree = "<group>"; };
+		185684B916841FC100D0B608 /* KLExpandingSelect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLExpandingSelect.m; sourceTree = "<group>"; };
+		185684BC16841FCE00D0B608 /* Petal Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Petal Data.plist"; sourceTree = "<group>"; };
+		185684BD16841FCE00D0B608 /* petal-email@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "petal-email@2x.png"; sourceTree = "<group>"; };
+		185684BE16841FCE00D0B608 /* petal-facebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "petal-facebook@2x.png"; sourceTree = "<group>"; };
+		185684BF16841FCE00D0B608 /* petal-save@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "petal-save@2x.png"; sourceTree = "<group>"; };
+		185684C016841FCE00D0B608 /* petal-twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "petal-twitter@2x.png"; sourceTree = "<group>"; };
+		185684C116841FCE00D0B608 /* petal-unsave@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "petal-unsave@2x.png"; sourceTree = "<group>"; };
 		771EEE9E1662FB0D006A0FDD /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		77A699651662C959004C8343 /* menuBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuBar.png; sourceTree = "<group>"; };
 		77A699661662C959004C8343 /* menuBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "menuBar@2x.png"; sourceTree = "<group>"; };
@@ -76,15 +85,12 @@
 		77A6BD6B1661A4BE00210C61 /* KLExpandingSelectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KLExpandingSelectTests.m; sourceTree = "<group>"; };
 		77A6BD751661A57300210C61 /* KLRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLRootViewController.h; sourceTree = "<group>"; };
 		77A6BD761661A57300210C61 /* KLRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLRootViewController.m; sourceTree = "<group>"; };
-		77A6BD791661A62A00210C61 /* KLExpandingSelect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KLExpandingSelect.h; sourceTree = "<group>"; };
-		77A6BD7A1661A62A00210C61 /* KLExpandingSelect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KLExpandingSelect.m; sourceTree = "<group>"; };
 		77A6BD7D1661BF4E00210C61 /* petal-email@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "petal-email@2x.png"; sourceTree = "<group>"; };
 		77A6BD7E1661BF4E00210C61 /* petal-facebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "petal-facebook@2x.png"; sourceTree = "<group>"; };
 		77A6BD7F1661BF4E00210C61 /* petal-save@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "petal-save@2x.png"; sourceTree = "<group>"; };
 		77A6BD801661BF4E00210C61 /* petal-twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "petal-twitter@2x.png"; sourceTree = "<group>"; };
 		77A6BD811661BF4E00210C61 /* petal-unsave@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "petal-unsave@2x.png"; sourceTree = "<group>"; };
 		77A6BD871661CFD500210C61 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		77A6BD8D1661DBC700210C61 /* Petal Data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "Petal Data.plist"; sourceTree = "<group>"; };
 		77C2ABFD1662F61A00EF2384 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		77C2AC001662F7BA00EF2384 /* controlShare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = controlShare.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -116,6 +122,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		185684BB16841FCE00D0B608 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				185684BC16841FCE00D0B608 /* Petal Data.plist */,
+				185684BD16841FCE00D0B608 /* petal-email@2x.png */,
+				185684BE16841FCE00D0B608 /* petal-facebook@2x.png */,
+				185684BF16841FCE00D0B608 /* petal-save@2x.png */,
+				185684C016841FCE00D0B608 /* petal-twitter@2x.png */,
+				185684C116841FCE00D0B608 /* petal-unsave@2x.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		77A699641662C93C004C8343 /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,7 +148,6 @@
 		77A6BD251661A4BE00210C61 = {
 			isa = PBXGroup;
 			children = (
-				77A6BD8D1661DBC700210C61 /* Petal Data.plist */,
 				77A6BD3A1661A4BE00210C61 /* KLExpandingSelect */,
 				77A6BD641661A4BE00210C61 /* KLExpandingSelectTests */,
 				77A6BD331661A4BE00210C61 /* Frameworks */,
@@ -163,6 +181,7 @@
 		77A6BD3A1661A4BE00210C61 /* KLExpandingSelect */ = {
 			isa = PBXGroup;
 			children = (
+				185684BB16841FCE00D0B608 /* Resources */,
 				77A699641662C93C004C8343 /* Images */,
 				77A6BD431661A4BE00210C61 /* KLAppDelegate.h */,
 				77A6BD441661A4BE00210C61 /* KLAppDelegate.m */,
@@ -212,9 +231,9 @@
 		77A6BD781661A61500210C61 /* KLExpandingSelect */ = {
 			isa = PBXGroup;
 			children = (
+				185684B816841FC100D0B608 /* KLExpandingSelect.h */,
+				185684B916841FC100D0B608 /* KLExpandingSelect.m */,
 				77A6BD7C1661BF3A00210C61 /* Images */,
-				77A6BD791661A62A00210C61 /* KLExpandingSelect.h */,
-				77A6BD7A1661A62A00210C61 /* KLExpandingSelect.m */,
 			);
 			name = KLExpandingSelect;
 			sourceTree = "<group>";
@@ -309,15 +328,15 @@
 				77A6BD4B1661A4BE00210C61 /* Default-568h@2x.png in Resources */,
 				77A6BD4E1661A4BE00210C61 /* MainStoryboard_iPhone.storyboard in Resources */,
 				77A6BD511661A4BE00210C61 /* MainStoryboard_iPad.storyboard in Resources */,
-				77A6BD821661BF4E00210C61 /* petal-email@2x.png in Resources */,
-				77A6BD831661BF4E00210C61 /* petal-facebook@2x.png in Resources */,
-				77A6BD841661BF4E00210C61 /* petal-save@2x.png in Resources */,
-				77A6BD851661BF4E00210C61 /* petal-twitter@2x.png in Resources */,
-				77A6BD861661BF4E00210C61 /* petal-unsave@2x.png in Resources */,
-				77A6BD8E1661DBC700210C61 /* Petal Data.plist in Resources */,
 				77A699671662C959004C8343 /* menuBar.png in Resources */,
 				77A699681662C959004C8343 /* menuBar@2x.png in Resources */,
 				77C2AC011662F7BA00EF2384 /* controlShare.png in Resources */,
+				185684C216841FCE00D0B608 /* Petal Data.plist in Resources */,
+				185684C316841FCE00D0B608 /* petal-email@2x.png in Resources */,
+				185684C416841FCE00D0B608 /* petal-facebook@2x.png in Resources */,
+				185684C516841FCE00D0B608 /* petal-save@2x.png in Resources */,
+				185684C616841FCE00D0B608 /* petal-twitter@2x.png in Resources */,
+				185684C716841FCE00D0B608 /* petal-unsave@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,10 +371,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185684C816841FE400D0B608 /* KLExpandingSelect.m in Sources */,
 				77A6BD411661A4BE00210C61 /* main.m in Sources */,
 				77A6BD451661A4BE00210C61 /* KLAppDelegate.m in Sources */,
 				77A6BD771661A57300210C61 /* KLRootViewController.m in Sources */,
-				77A6BD7B1661A62A00210C61 /* KLExpandingSelect.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +383,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77A6BD6C1661A4BE00210C61 /* KLExpandingSelectTests.m in Sources */,
+				185684BA16841FC100D0B608 /* KLExpandingSelect.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
