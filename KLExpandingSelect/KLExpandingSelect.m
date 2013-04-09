@@ -361,7 +361,11 @@
     [self lastRotationBlock:lastDuration
                lastRotation:lastRotation
                  andOptions:endOptions];
-    [self quarterSpinningBlock:quarterDuration lastDuration:lastDuration lastRotation:lastRotation options:options numberRepeats:numberRepeats];
+    
+    [self quarterSpinningBlock:quarterDuration
+                  lastDuration:lastDuration
+                  lastRotation:lastRotation
+                 numberRepeats:numberRepeats];
     
     completion(YES);
 }
@@ -369,13 +373,12 @@
 -(void) quarterSpinningBlock: (CGFloat) quarterDuration
                 lastDuration: (NSInteger) lastDuration
                 lastRotation: (NSInteger) lastRotation
-                     options: (CGFloat) startOptions
                numberRepeats: (NSInteger) numberRepeats
 {
     if (numberRepeats) {
     [UIView animateWithDuration:quarterDuration
                           delay:0
-                        options:startOptions
+                        options:UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveLinear
                      animations:^{
                          self.transform = CGAffineTransformRotate(self.transform, M_PI_2);
                      }
@@ -384,7 +387,6 @@
                              [self quarterSpinningBlock: quarterDuration
                                            lastDuration: lastDuration
                                            lastRotation: lastRotation
-                                                options: UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveLinear
                                           numberRepeats:numberRepeats - 1];
                          } else {
                              [self lastRotationBlock: lastDuration
