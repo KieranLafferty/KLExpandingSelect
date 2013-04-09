@@ -353,7 +353,7 @@
                       rotation:lastRotation
                  numberRepeats:numberRepeats];
     
-    completion(YES);
+    return completion(YES);
 }
 
 -(void) quarterSpinningBlock: (CGFloat) quarterDuration
@@ -391,9 +391,9 @@
 
 -(void) lastRotationBlockWithDuration: (CGFloat) duration
                           andRotation: (CGFloat) rotation {
-    [UIView animateWithDuration:duration
-                          delay:0
-                        options: UIViewAnimationOptionCurveEaseOut
+    [UIView animateWithDuration: duration
+                          delay: 0
+                        options: UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveEaseOut
                      animations:^{
                          self.transform = CGAffineTransformRotate(self.transform, rotation);
                      }
