@@ -358,47 +358,63 @@
     } else {
         endOptions |= UIViewAnimationOptionCurveLinear;
     }
+    [self lastRotationBlock:lastDuration
+               lastRotation:lastRotation
+                 andOptions:endOptions];
+    [self quarterSpinningBlock:quarterDuration lastDuration:lastDuration lastRotation:lastRotation options:options numberRepeats:numberRepeats];
     
-    void (^lastRotationBlock)(void) = ^ {
-        [UIView animateWithDuration:lastDuration
-                              delay:0
-                            options:endOptions
-                         animations:^{
-                             self.transform = CGAffineTransformRotate(self.transform, lastRotation);
-                         }
-                         completion:^(BOOL finished) {
-                         }
-         ];
-    };
-    
-    if (numberRepeats) {
-        __block void (^quarterSpinningBlock)(void) = ^{
-            [UIView animateWithDuration:quarterDuration
-                                  delay:0
-                                options:startOptions
-                             animations:^{
-                                 self.transform = CGAffineTransformRotate(self.transform, M_PI_2);
-                                 numberRepeats--;
-                             }
-                             completion:^(BOOL finished) {
-                                 if (numberRepeats > 0) {
-                                     startOptions = UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveLinear;
-                                     quarterSpinningBlock();
-                                 } else {
-                                     lastRotationBlock();
-                                     completion(finished);
+    completion(YES);
+}
 
-                                 }
-                             }
-             ];
-            
-        };
-        
-        quarterSpinningBlock();
-    } else {
-        lastRotationBlock();
+-(void) quarterSpinningBlock: (CGFloat) quarterDuration
+                lastDuration: (NSInteger) lastDuration
+                lastRotation: (NSInteger) lastRotation
+                     options: (CGFloat) startOptions
+               numberRepeats: (NSInteger) numberRepeats
+{
+    if (numberRepeats) {
+    [UIView animateWithDuration:quarterDuration
+                          delay:0
+                        options:startOptions
+                     animations:^{
+                         self.transform = CGAffineTransformRotate(self.transform, M_PI_2);
+                     }
+                     completion:^(BOOL finished) {
+                         if (numberRepeats > 0) {
+                             [self quarterSpinningBlock: quarterDuration
+                                           lastDuration: lastDuration
+                                           lastRotation: lastRotation
+                                                options: UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveLinear
+                                          numberRepeats:numberRepeats - 1];
+                         } else {
+                             [self lastRotationBlock: lastDuration
+                                        lastRotation: lastRotation
+                                          andOptions: UIViewAnimationOptionCurveEaseOut];
+                             return;
+                             
+                         }
+                     }
+     ];
+    }
+    else {
+        [self lastRotationBlock:lastDuration
+                   lastRotation:lastRotation
+                     andOptions: UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveLinear];
     }
 }
 
+-(void) lastRotationBlock: (CGFloat) lastDuration
+             lastRotation: (CGFloat) lastRotation
+               andOptions:(UIViewAnimationOptions) endOptions {
+    [UIView animateWithDuration:lastDuration
+                          delay:0
+                        options:endOptions
+                     animations:^{
+                         self.transform = CGAffineTransformRotate(self.transform, lastRotation);
+                     }
+                     completion:^(BOOL finished) {
+                     }
+     ];
+}
 
 @end
