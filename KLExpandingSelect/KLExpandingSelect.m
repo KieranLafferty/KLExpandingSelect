@@ -160,7 +160,6 @@
     
     [petal rotationWithDuration: kAnimationRotateDuration
                          angle: rotationAngle
-                       options:UIViewAnimationCurveEaseInOut
                     completion:^(BOOL finished) {
                         if ([self.delegate respondsToSelector:@selector(expandingSelector:didFinishExpandingPetal:)]) {
                             [self.delegate expandingSelector: self
@@ -334,33 +333,20 @@
     return self;
 }
 
-- (void)rotationWithDuration:(NSTimeInterval)duration angle:(CGFloat)angle options:(UIViewAnimationOptions)options completion:(void (^)(BOOL finished))completion
+- (void)rotationWithDuration:(NSTimeInterval)duration
+                       angle:(CGFloat)angle
+                  completion:(void (^)(BOOL finished))completion
 {
     // Repeat a quarter rotation as many times as needed to complete the full rotation
     CGFloat sign = angle > 0 ? 1 : -1;
-    __block NSUInteger numberRepeats = floorf(fabsf(angle) / M_PI_2);
+    NSUInteger numberRepeats = floorf(fabsf(angle) / M_PI_2);
     CGFloat quarterDuration = duration * M_PI_2 / fabs(angle);
     
     CGFloat lastRotation = angle - sign * numberRepeats * M_PI_2;
     CGFloat lastDuration = duration - quarterDuration * numberRepeats;
-    
-    __block UIViewAnimationOptions startOptions = UIViewAnimationOptionBeginFromCurrentState;
-    UIViewAnimationOptions endOptions = UIViewAnimationOptionBeginFromCurrentState;
-    
-    if (options & UIViewAnimationOptionCurveEaseIn || options == UIViewAnimationOptionCurveEaseInOut) {
-        startOptions |= UIViewAnimationOptionCurveEaseIn;
-    } else {
-        startOptions |= UIViewAnimationOptionCurveLinear;
-    }
-    
-    if (options & UIViewAnimationOptionCurveEaseOut || options == UIViewAnimationOptionCurveEaseInOut) {
-        endOptions |= UIViewAnimationOptionCurveEaseOut;
-    } else {
-        endOptions |= UIViewAnimationOptionCurveLinear;
-    }
+        
     [self lastRotationBlock:lastDuration
-               lastRotation:lastRotation
-                 andOptions:endOptions];
+               lastRotation:lastRotation];
     
     [self quarterSpinningBlock:quarterDuration
                   lastDuration:lastDuration
@@ -390,8 +376,7 @@
                                           numberRepeats:numberRepeats - 1];
                          } else {
                              [self lastRotationBlock: lastDuration
-                                        lastRotation: lastRotation
-                                          andOptions: UIViewAnimationOptionCurveEaseOut];
+                                        lastRotation: lastRotation];
                              return;
                              
                          }
@@ -400,17 +385,15 @@
     }
     else {
         [self lastRotationBlock:lastDuration
-                   lastRotation:lastRotation
-                     andOptions: UIViewAnimationOptionBeginFromCurrentState | UIViewAnimationOptionCurveLinear];
+                   lastRotation:lastRotation];
     }
 }
 
 -(void) lastRotationBlock: (CGFloat) lastDuration
-             lastRotation: (CGFloat) lastRotation
-               andOptions:(UIViewAnimationOptions) endOptions {
+             lastRotation: (CGFloat) lastRotation {
     [UIView animateWithDuration:lastDuration
                           delay:0
-                        options:endOptions
+                        options: UIViewAnimationOptionCurveEaseOut
                      animations:^{
                          self.transform = CGAffineTransformRotate(self.transform, lastRotation);
                      }

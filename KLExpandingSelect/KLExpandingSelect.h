@@ -12,7 +12,9 @@
 //KLExpandingPetal is the equivelant of a UITableviewCell for this control. It follows the same configuration as a tableview delegate
 @interface KLExpandingPetal : UIButton
 @property (nonatomic, strong) UIImageView* backgroundImage;
-- (void)rotationWithDuration:(NSTimeInterval)duration angle:(CGFloat)angle options:(UIViewAnimationOptions)options completion:(void (^)(BOOL finished))completion;
+- (void)rotationWithDuration:(NSTimeInterval)duration
+                       angle:(CGFloat)angle
+                  completion:(void (^)(BOOL finished))completion;
 - (id) initWithImage:(UIImage*) image;
 @end
 
