@@ -345,20 +345,20 @@
     CGFloat lastRotation = angle - sign * numberRepeats * M_PI_2;
     CGFloat lastDuration = duration - quarterDuration * numberRepeats;
         
-    [self lastRotationBlock:lastDuration
-               lastRotation:lastRotation];
+    [self lastRotationBlockWithDuration:lastDuration
+                            andRotation:lastRotation];
     
     [self quarterSpinningBlock:quarterDuration
-                  lastDuration:lastDuration
-                  lastRotation:lastRotation
+                      duration:lastDuration
+                      rotation:lastRotation
                  numberRepeats:numberRepeats];
     
     completion(YES);
 }
 
 -(void) quarterSpinningBlock: (CGFloat) quarterDuration
-                lastDuration: (NSInteger) lastDuration
-                lastRotation: (NSInteger) lastRotation
+                duration: (NSInteger) duration
+                rotation: (NSInteger) rotation
                numberRepeats: (NSInteger) numberRepeats
 {
     if (numberRepeats) {
@@ -371,12 +371,12 @@
                      completion:^(BOOL finished) {
                          if (numberRepeats > 0) {
                              [self quarterSpinningBlock: quarterDuration
-                                           lastDuration: lastDuration
-                                           lastRotation: lastRotation
-                                          numberRepeats:numberRepeats - 1];
+                                               duration: duration
+                                               rotation: rotation
+                                          numberRepeats: numberRepeats - 1];
                          } else {
-                             [self lastRotationBlock: lastDuration
-                                        lastRotation: lastRotation];
+                             [self lastRotationBlockWithDuration:duration
+                                                     andRotation:rotation];
                              return;
                              
                          }
@@ -384,18 +384,18 @@
      ];
     }
     else {
-        [self lastRotationBlock:lastDuration
-                   lastRotation:lastRotation];
+        [self lastRotationBlockWithDuration: duration
+                                andRotation: rotation];
     }
 }
 
--(void) lastRotationBlock: (CGFloat) lastDuration
-             lastRotation: (CGFloat) lastRotation {
-    [UIView animateWithDuration:lastDuration
+-(void) lastRotationBlockWithDuration: (CGFloat) duration
+                          andRotation: (CGFloat) rotation {
+    [UIView animateWithDuration:duration
                           delay:0
                         options: UIViewAnimationOptionCurveEaseOut
                      animations:^{
-                         self.transform = CGAffineTransformRotate(self.transform, lastRotation);
+                         self.transform = CGAffineTransformRotate(self.transform, rotation);
                      }
                      completion:^(BOOL finished) {
                      }
