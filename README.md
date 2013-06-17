@@ -22,6 +22,11 @@ Drag the included <code>KLExpandingSelect.h, KLExpandingSelect.m</code> files in
 
 * QuartzCore.framework
 
+
+Install via Cocoapods by adding the following line to your podfile
+
+	pod 'KLExpandingSelect'
+	
 ## Usage ##
 
 Import the required file and declare your controller to conform to the KLExpandingSelect datasource and delegate
