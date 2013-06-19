@@ -442,7 +442,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kieran Lafferty (47FSUFR242)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kieran Lafferty (47FSUFR242)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -471,7 +472,8 @@
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Kieran Lafferty (47FSUFR242)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Kieran Lafferty (47FSUFR242)";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -494,8 +496,6 @@
 				GCC_PREFIX_HEADER = "KLExpandingSelect/KLExpandingSelect-Prefix.pch";
 				INFOPLIST_FILE = "KLExpandingSelect/KLExpandingSelect-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "84D11397-7195-4F47-88C0-FEB8EB407367";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "84D11397-7195-4F47-88C0-FEB8EB407367";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -508,7 +508,6 @@
 				GCC_PREFIX_HEADER = "KLExpandingSelect/KLExpandingSelect-Prefix.pch";
 				INFOPLIST_FILE = "KLExpandingSelect/KLExpandingSelect-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "84D11397-7195-4F47-88C0-FEB8EB407367";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
